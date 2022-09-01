@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Portfolio Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mobile_styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<body>
+    <div id="loading">Loading...</div>
+    
+    <div id="navbar">
+        <div id="resourcesWrapper">
+            <a href="https://github.com/jsalemfinancial"  target="_blank"><i class="fa fa-github"></i></a>
+            <div id="contactContainerWrapper">
+                <div class="contactWrapper">
+                    <i class="fa fa-envelope"></i>
+                    <p id="email">josephhsalem@gmail.com<p>
+                </div>
+
+                <div class="contactWrapper">
+                    <i class="fa fa-phone"></i>
+                    <p id="phone">(248) 872-5856<p>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbarButtonContainer">
+            <span class="navbarButton" id="about">About</span>
+            <span class="navbarButton" id="projects">Projects</span>
+            <span class="navbarButton" id="interests">Interests</span>
+        </div>
+    </div>
+
+    <i class="fa fa-arrow-circle-up" id="topPageButton"></i>
+
+    <div id="mainContentBox">
+        <div class="mainContentElements" id="aboutContent">
+            <div class="basicContentElements">
+                <span>
+                    <h1>Hello!</h1>
+                    <p>
+                        Greetings and salutations.
+                    </p>
+
+                    <p>
+                        Welcome to my portfolio site, a compendium of my projects.
+                    </p>
+                </span>
+            </div>
+
+            <div class="basicContentElements">
+                <span>
+                    <h1>Introduction</h1>
+                    <p>
+                        My name is Joseph Salem. . .
+                    </p>
+                </span>
+            </div>
+
+            <div class="basicContentElements">
+                <span> 
+                    <h1>Disclaimers and Warnings</h1>
+                </span>
+            </div>
+        </div>
+
+        <div class="mainContentElements" id="projectsContent">
+            <div class="basicContentElements">
+                <span>
+                    <h1>Projects and Scripts</h1>
+                    <p>
+                        Here you will find small scripts and explanations of projects that you can locate in my GitHub page (click the icon in the top left corner!)
+                        These range from simple applications of Python libraries, Python analytical scripts, and financial/technical analysis scripts written in PineScript.
+                    </p>
+
+                    <p>
+                        Each PineScript project will include an interactive asset graph from TradingView. PineScript is the programming language developed by TradingView
+                        to analyze and visualize timeseries for financial asset data; click the little <i class="fa fa-area-chart"></i> icon to bring it up!
+                    </p>
+                </span>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                    <h1>Project #1: Relative Strength Indicator</h1>
+
+                    <p>
+                        <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/Relative_strength_index">Relative Strength Index</a>
+                        is a technical analysis tool first developed by 
+                        <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/J._Welles_Wilder_Jr.">J. Welles Wilder Jr.</a> 
+                        and published in his book <em>New Concepts in Technical Analysis.</em> A copy of this book is avaible for free online 
+                        and is a short and interesting read; you will find many other popular analysis tools/methods and the reasoning behind 
+                        their construction. Wilder is often considered the "Father of Technical Analysis" for his contributions to the field.
+                    </p>
+
+                    <p>
+                        Although technical analysis might seem as useful as astrology, it is in fact utilized by many hedge funds as its own 
+                        strategy division. The RSI in particular is used to trade not only stocks, but (as was its original purpose) futures 
+                        contracts (commodities) as well.
+                    </p>
+
+                    <p>
+                        The RSI is calculated as follows:
+
+                        <span class="equation">\[RSI = 100 - \frac{100}{1 + RS}\]</span>
+                    </p>
+
+                    <p>
+                        Here, <span class="equation">$RS$</span> is the Relative Strength Factor and is the ratio of the
+                        <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/Moving_average">moving averages</a> of
+                        upward changes and downward changes, where each move is calculated as follows:
+
+                        <span class="equation">
+                            \[
+                            price_{now} > price_{previous} \implies \begin{cases}
+                                U = close_{now} - close_{previous}\\
+                                D = 0
+                            \end{cases}
+                            \]
+                        </span>
+
+                        <span class="equation">
+                            \[
+                            price_{previous} > price_{now} \implies \begin{cases}
+                                U = 0\\
+                                D = close_{previous} - close_{now}
+                            \end{cases}
+                            \]
+                        </span>
+                    </p>
+
+                    <p>
+                        The ratio is thus:
+
+                        <span class="equation">\[RS = \frac{EMA\left(U, n\right)}{EMA\left(D, n\right)}\]</span>
+                    </p>
+
+                    <p>
+                        EMA stands for Exponential Moving Average, which weighs a series of data (typically) using a factor of 
+                        <span class="equation">$\alpha = \frac{2}{N+1}$</span>. Here, <span class="equation">$\alpha$</span> is called the
+                        degree of weight decrease or smoothing factor, and there is no "correct" value to use for any of the weighted moving averages.
+                        The value used for the EMA is such that it's centering is equal to that of a Simple Moving Average (SMA).
+                    </p>
+
+                    <p>
+                        Click here for an example: <i class="fa fa-area-chart chartButton"></i>
+                    </p>
+
+                    <span class="chartLightbox">
+                        <span class="lightboxCloseButton">&times;</span>
+        
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                        var tradingview_embed_options = {};
+                        tradingview_embed_options.width = '720';
+                        tradingview_embed_options.height = '480';
+                        tradingview_embed_options.chart = 'f2O1fJQL';
+                        new TradingView.chart(tradingview_embed_options);
+                        </script>
+                    </span>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #2: Price Percentage Oscillator</h1>
+
+                <p>
+                    <a class="uLink" target="_blank" href="https://www.investopedia.com/terms/p/ppo.asp">Price Percentage Oscillator</a>, or PPO, is a technical indicator that shows a ratio between a "short" and "long"
+                    moving averages (typically Exponential Moving Averages) relating to price. The periods of these moving averages
+                    can vary, but the typical formula is:
+
+                    <span class="equation">\[PPO = \frac{EMA_{12} - EMA_{26}}{EMA_{26}} \times 100\]</span>    
+                </p>
+
+                <p>
+                    Whenever the indicator is greater than 0, then the 12-period EMA is greater than the 26-period EMA by that percentage;
+                    whenever the indicator is less than 0, then vis versa.   
+                </p>
+
+                <p>
+                    I personally incorporate a momentum indicator along with the PPO that is similar in style to the 
+                    <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/MACD">Moving Average Convergence/Divergence</a>
+                    indicator, wherein a <em>signal</em> moving average is used to assist in identifying convergence and divergence moves.
+                    I typically use a very short moving average for the signal line and visually judge the momentum of the trends by a colored area
+                    difference between the PPO line and the signal line.
+                </p>
+
+                <p>
+                    Click here for an example: <i class="fa fa-area-chart chartButton"></i>
+                </p>
+
+                <span class="chartLightbox">
+                    <span class="lightboxCloseButton">&times;</span>
+    
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    var tradingview_embed_options = {};
+                    tradingview_embed_options.width = '720';
+                    tradingview_embed_options.height = '480';
+                    tradingview_embed_options.chart = 'f2O1fJQL';
+                    new TradingView.chart(tradingview_embed_options);
+                    </script>
+                </span>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #3: On-Balance-Volume Momentum Oscillator</h1>
+
+                <p>
+                    <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/On-balance_volume">On-Balance-Volume</a> , or OBV
+                    is a technical indicator popularized by <a class="uLink" target="_blank" href="https://en.wikipedia.org/wiki/Joseph_Granville">Joseph Granville</a>
+                    which tracks a relationship between price and volume.
+                </p>
+
+                <p>
+                    OBV can be calculated with the piecewise function:
+
+                    <span class="equation">\[
+                        OBV = OBV_{prev} + \begin{cases}
+                            volume & close > close_{prev}\\
+                            0 & close = close_{prev}\\
+                            -volume & close_{prev} > close
+                        \end{cases}
+                        \]
+                    </span>  
+                </p>
+
+                <p>
+                    This essentially takes
+                </p>
+
+                <span class="chartLightbox">
+                    <span class="lightboxCloseButton">&times;</span>
+    
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    var tradingview_embed_options = {};
+                    tradingview_embed_options.width = '720';
+                    tradingview_embed_options.height = '480';
+                    tradingview_embed_options.chart = 'f2O1fJQL';
+                    new TradingView.chart(tradingview_embed_options);
+                    </script>
+                </span>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #4: A Better Linear Correlation Coefficient</h1>
+
+                <p>
+                    Correlation Coefficients. . .
+                    <i class="fa fa-area-chart chartButton"></i>
+                </p>
+
+                <span class="chartLightbox">
+                    <span class="lightboxCloseButton">&times;</span>
+    
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    var tradingview_embed_options = {};
+                    tradingview_embed_options.width = '720';
+                    tradingview_embed_options.height = '480';
+                    tradingview_embed_options.chart = 'f2O1fJQL';
+                    new TradingView.chart(tradingview_embed_options);
+                    </script>
+                </span>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #5: Options Lab</h1>
+
+                <p>
+                    Options contracts are a type of derivative security. We can fetch and analyze data using the YFinance Python package
+                </p>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #6: Financial Analysis Lab</h1>
+    
+                <p>
+                    Using the YFinance package again, we can request
+                </p>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #7: Fun Data Sorting with Python and SQL</h1>
+
+                <p>
+                    This project uses Python to fetch item price data from the OSRS Wiki and queries results with SQL to
+                    package them into XML format; this is particularly useful if one wishes to host this processed data on a server!
+                </p>
+            </div>
+
+            <hr class="sectionDivider">
+
+            <div class="basicContentElements">
+                <h1>Project #8: Requesting and Mapping Broker Data</h1>
+    
+                <p>
+                    In order to get the same results using this script, you must have a subscription to Interactive Broker's data stream and have access to Trader Workstation.
+                    Pictures will be provided for instead!
+                </p>
+            </div>
+        </div>
+
+        <div class="mainContentElements" id="interestsContent">
+            <div class="basicContentElements">
+                <h1>Lonely Content.</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- <footer style="width: 90%; overflow: auto; height: 10vh; background-color: rgb(163, 145, 145); box-shadow: 0 5px 1em rgb(0, 0, 0);"></footer> -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/frontend.js"></script>
+
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</html>
