@@ -14,16 +14,20 @@ body::-webkit-scrollbar-corner, p::-webkit-scrollbar-button:decrement, p::-webki
   width: 0;
   height: 0;
 }
+
 body::-webkit-scrollbar-button {
     width: 0;
     height: 0;
 }
+
 body::-webkit-scrollbar{
     width: 0.5vw;
 }
+
 body::-webkit-track {
     background: transparent;
-} 
+}
+
 body::-webkit-scrollbar-thumb {
     background-color: #d3869b;
     border-radius: 30vw;
@@ -44,6 +48,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 p {
     font-family: "Noto Sans";
 
@@ -61,7 +66,7 @@ em {
     font-family: inherit;
     color: #d3869b;
 }
-.sectionDivider {
+.section-divider {
     border: none;
     border-top: 2vh dotted #ebdbb2;
 
@@ -70,11 +75,11 @@ em {
 .equation {
     color: #d3869b;
 }
-.uLink {
+.u-link {
     color: #fabd2f;
     text-decoration: underline;
 }
-.navbarButton {
+.navbar-button {
     font-family: "Noto Sans Bold";
     font-size: 2vw;
 
@@ -92,7 +97,7 @@ em {
     justify-content: center;
 
 }
-.contactWrapper {
+.contact-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,18 +112,18 @@ em {
     color: #b8bb26;
     cursor: pointer;
 }
-.mainContentElements {
+.main-content-elements {
     margin: 0%;
     color: #ebdbb2;
 }
-.basicContentElements {
+.basic-content-elements {
     position: relative;
     font-family: 'Noto Sans Regular';
     width: 100%;
     height: 100%;
 }
 
-.chartLightbox {
+.chart-lightbox {
     background-color:#282828d9;
     display: none; 
     z-index: 999; 
@@ -133,22 +138,22 @@ em {
     left: 0; 
     overflow: auto;
 }
-.lightboxCloseButton {
+.lightbox-close-button {
     position: absolute; 
     right: 10%; 
     top: 10%; 
     color: white; 
     font-size: 5vw;
 }
-.lightboxCloseButton:hover {
+.lightbox-close-button:hover {
     cursor: pointer;
 }
-.basicContentElements h1{
+.basic-content-elements h1{
     font-family: "Noto Sans Bold";
     font-size: 2em;
     margin: 5%;
 }
-.basicContentElements p{
+.basic-content-elements p{
     font-size: 1em;
     width: 80%;
     color: #83a598;
@@ -163,8 +168,8 @@ em {
 
     padding-left: 10%;
 }
-#topPageButton {
-    color: #d3869b;
+#top-page-button {
+    color: #fabd2f;
     font-size: 3vw;
     position: fixed;
 
@@ -173,28 +178,24 @@ em {
     right: 0;
     bottom: 5vw;
     z-index: 999;
+    text-shadow: 0 0.15vw 0.5vw rgba(0, 0, 0, 0.5);
 
     display: none;
     opacity: 0;
     align-items: center;
     justify-content: center;
 }
-#topPageButton:hover {
+#top-page-button:hover {
     color: #b8bb26;
     cursor: pointer;
 }
 #navbar {
-    flex: 1 1 auto;
-    /* background-image: url("../imgs/layered-steps-haikei.svg");
-    background-size: 50%;
-    background-position-x: left;
-    background-position-y: 7%;
-    background-repeat: no-repeat; */
+    background-color:#504945;
     position: fixed;
+    
     top: 0;
     left: 5vw;
     height: 10vh;
-    background-color:#504945;
     width: 90%;
     overflow: hidden;
 
@@ -203,9 +204,8 @@ em {
     justify-content: right;
 
     z-index: 5;
-    box-shadow: 0 5px 1em rgb(0, 0, 0);
 }
-#navbarButtonContainer { 
+#navbar-buttons-container { 
     position: relative;
     width: 30%;
     height: 10vh;
@@ -217,7 +217,7 @@ em {
     align-items: center;
     justify-content: center;
 }
-#resourcesWrapper {
+#resources-wrapper {
     height: 100%;
     flex: 1;
     display: flex;
@@ -227,7 +227,7 @@ em {
     color: #d3869b;
     margin-left: 2%
 }
-#contactContainerWrapper {
+#contact-container-wrapper {
     height: 100%;
     width: 50%;
     display: flex;
@@ -251,7 +251,7 @@ em {
 #about:hover, #projects:hover, #interests:hover {
     color: #b8bb26;
 }
-#aboutContent, #projectsContent, #interestsContent {
+#about-content, #projects-content, #interests-content {
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -262,12 +262,12 @@ em {
     justify-content: center;
 }
 
-#mainContentBox {
+#main-content-box {
     color: #EDF5E1;
     background-color: #282828;
 
     position: relative;
-    top: 10vh;
+    padding-top: 10vh;
     width: 90%;
     height: 100%;
     flex: 2 1 auto;

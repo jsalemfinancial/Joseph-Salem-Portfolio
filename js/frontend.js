@@ -11,8 +11,8 @@ class Slides {
     constructor() {
         this.page = 0;
         this.counter = 0;
-        this.topic = document.getElementById("mainContentBox").getElementsByClassName("mainContentElements");
-        this.numTopics = document.getElementsByClassName("navbarButton").length;
+        this.topic = document.getElementById("main-content-box").getElementsByClassName("main-content-elements");
+        this.numTopics = document.getElementsByClassName("navbar-button").length;
         this.pageSelect();
     }
 
@@ -40,7 +40,7 @@ class Chart {
 
     constructor() {
         // this.chartCount = document.getElementsByClassName("chartContentBox").length;
-        this.currentLightbox = document.getElementsByClassName("chartLightbox");
+        this.currentLightbox = document.getElementsByClassName("chart-lightbox");
     }
 
     // unloadPrevChart(index) {
@@ -66,12 +66,12 @@ class Chart {
     //     this.unloadPrevChart(index)
     // }
     loadChartLightbox(index) {
-        document.getElementsByClassName("chartLightbox")[index].style.display = "flex";
+        document.getElementsByClassName("chart-lightbox")[index].style.display = "flex";
         document.getElementsByTagName("body")[0].style.overflow = "hidden";
     }
 
     unloadChartLightbox(index) {
-        document.getElementsByClassName("chartLightbox")[index].style.display = "none";
+        document.getElementsByClassName("chart-lightbox")[index].style.display = "none";
         document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
 }
@@ -96,16 +96,16 @@ window.addEventListener("load", function() {
         var pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, 
             document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight ); //Thanks StackExchange.
 
-        if ((window.scrollY || document.documentElement.scrollTop) > (pageHeight * 0.1) && (document.getElementById("topPageButton").style.display == "")) {
-            document.getElementById("topPageButton").animate(topPageButtonKeyframes, {duration: 500, fill: "forwards"});
-            document.getElementById("topPageButton").style.display = "flex";
+        if ((window.scrollY || document.documentElement.scrollTop) > (pageHeight * 0.1) && (document.getElementById("top-page-button").style.display == "")) {
+            document.getElementById("top-page-button").animate(topPageButtonKeyframes, {duration: 500, fill: "forwards"});
+            document.getElementById("top-page-button").style.display = "flex";
             
-        } else if ((window.scrollY || document.documentElement.scrollTop) < (pageHeight * 0.1) && (document.getElementById("topPageButton").style.display == "flex")) {
-            document.getElementById("topPageButton").style.display = "";
+        } else if ((window.scrollY || document.documentElement.scrollTop) < (pageHeight * 0.1) && (document.getElementById("top-page-button").style.display == "flex")) {
+            document.getElementById("top-page-button").style.display = "";
         };
     });
 
-    document.getElementById("topPageButton").addEventListener("click", function() {
+    document.getElementById("top-page-button").addEventListener("click", function() {
         window.scrollY = 0;
         document.documentElement.scrollTop = 0;
     });
@@ -134,22 +134,22 @@ window.addEventListener("load", function() {
         document.getElementById("projects").style.boxShadow = "0 -0.5vh 0 #fabd2f inset";
     });
 
-    document.querySelectorAll(".chartButton").forEach(overlay => {
+    document.querySelectorAll(".chart-button").forEach(overlay => {
         overlay.addEventListener("click", function(event) {
             console.log("click!");
-            for (var i = 0; i < document.getElementsByClassName("chartButton").length; i++) {
-                if (document.getElementsByClassName("chartButton")[i] == event.target) {
+            for (var i = 0; i < document.getElementsByClassName("chart-button").length; i++) {
+                if (document.getElementsByClassName("chart-button")[i] == event.target) {
                     chart.loadChartLightbox(i);
                 };
             };
         });
     });
 
-    document.querySelectorAll(".lightboxCloseButton").forEach(overlay => {
+    document.querySelectorAll(".lightbox-close-button").forEach(overlay => {
         overlay.addEventListener("click", function(event) {
             console.log("click!");
-            for (var i = 0; i < document.getElementsByClassName("lightboxCloseButton").length; i++) {
-                if (document.getElementsByClassName("lightboxCloseButton")[i] == event.target) {
+            for (var i = 0; i < document.getElementsByClassName("lightbox-close-button").length; i++) {
+                if (document.getElementsByClassName("lightbox-close-button")[i] == event.target) {
                     chart.unloadChartLightbox(i);
                 };
             };
