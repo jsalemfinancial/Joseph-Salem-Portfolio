@@ -1,35 +1,40 @@
 /*Mobile Style Sheet*/
-@media screen and (max-width: 1000px) {
-    .basicContentElements p {
-        font-size: 1.5vh;
-    }
-    .basicContentElements h1 {
-        font-size: 3vh;
-    }
-    div > .fa-envelope {
-        font-size: 2vh; 
-    }
-    div > .fa-phone {
-        font-size: 2vh; 
-    }
-    a > .fa-github {
-        font-size: 5vh; 
-    }
-    #about, #projects, #interests{
-        font-size: 2vh;
-    }
-    #homeButton {
-        font-size: 3vh;
-    }
-    #slidesButtonLeft, #slidesButtonRight {
-        font-size: 3vh;
-        width: 7%;
-        max-height: 7%;
-    }
-    #slidesButtonLeft {
-        margin-left: 1%;
-    }
-    #slidesButtonRight {
-        margin-right: 1%;
-    }
+@media only screen and (orientation: portrait),
+    only screen and (max-width: 900px) {
+        .basicContentElements p {
+            font-size: 1.5vh;
+        }
+        .basicContentElements h1 {
+            font-size: 3vh;
+        }
+
+        div > .fa-envelope {
+            font-size: 2vh; 
+        }
+
+        div > .fa-phone {
+            font-size: 2vh; 
+        }
+
+        .fa-github {
+            font-size: 6vw; 
+        }
+
+        #about, #projects, #interests{
+            font-size: 2vh;
+        }
+        #homeButton {
+            font-size: 3vh;
+        }
+        #slidesButtonLeft, #slidesButtonRight {
+            font-size: 3vh;
+            width: 7%;
+            max-height: 7%;
+        }
+        #slidesButtonLeft {
+            margin-left: 1%;
+        }
+        #slidesButtonRight {
+            margin-right: 1%;
+        }
 }

@@ -1,87 +1,28 @@
 /*Main Style Sheet*/
 
-@font-face {
-    font-family: "Noto Sans";
-    src: url(../fonts/NotoSans-Regular.ttf) format("truetype");
-}
-@font-face { 
-    font-family: "Noto Sans Bold"; 
-    font-weight: bold; 
-    src: url(../fonts/NotoSans-Bold.ttf) format("truetype");
-}
-
-body::-webkit-scrollbar-corner, p::-webkit-scrollbar-button:decrement, p::-webkit-scrollbar-button:increment {
-  width: 0;
-  height: 0;
-}
-
-body::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
-}
-
-body::-webkit-scrollbar{
-    width: 0.5vw;
-}
-
-body::-webkit-track {
-    background: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #d3869b;
-    border-radius: 30vw;
-    -webkit-border-radius: 30vw;
-}
-
-body {
-    scrollbar-width: 1vw;
-    scrollbar-color: #d3869b transparent;
-
-    margin: 0;
-    height: 100%;
-    background-color: #ebdbb2;
-    overflow-x: hidden;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-p {
-    font-family: "Noto Sans";
-
-    word-break: break-all;
-    white-space: normal;
-}
-a {
-    text-decoration: none;
-}
-a > .fa-github {
-    font-size: 5vw;
-    color: #fabd2f;
-}
-em {
-    font-family: inherit;
-    color: #d3869b;
-}
 .section-divider {
     border: none;
     border-top: 2vh dotted #ebdbb2;
 
     width: 90%;
 }
+
 .equation {
     color: #d3869b;
 }
+
 .u-link {
     color: #fabd2f;
     text-decoration: underline;
 }
+
+.flex-divider-horizontal {
+    height: 0;
+    flex-basis: 100%;
+}
+
 .navbar-button {
     font-family: "Noto Sans Bold";
-    font-size: 2vw;
 
     color: #ebdbb2;
     height: 9vh;
@@ -97,6 +38,7 @@ em {
     justify-content: center;
 
 }
+
 .contact-wrapper {
     display: flex;
     flex-direction: row;
@@ -104,55 +46,42 @@ em {
     align-items: center;
     text-align: center;
 }
+
+.fa-github {
+    font-size: 5vw;
+    color: #fabd2f;
+    filter: drop-shadow(-0.1vw 0.1vw 0.1vw black);
+}
+
 .fa-envelope, .fa-phone, .fa-area-chart {
     font-size: 1.5vw; 
     color: #d3869b;
 }
+
 .fa-github:hover, .fa-area-chart:hover {
     color: #b8bb26;
     cursor: pointer;
 }
+
 .main-content-elements {
-    margin: 0%;
     color: #ebdbb2;
 }
+
 .basic-content-elements {
     position: relative;
     font-family: 'Noto Sans Regular';
     width: 100%;
     height: 100%;
+
+    margin: 0 0 5% 0;
 }
 
-.chart-lightbox {
-    background-color:#282828d9;
-    display: none; 
-    z-index: 999; 
-    position: fixed;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0; 
-    height: 100vh; 
-    width: 100vw; 
-    top: 0; 
-    left: 0; 
-    overflow: auto;
-}
-.lightbox-close-button {
-    position: absolute; 
-    right: 10%; 
-    top: 10%; 
-    color: white; 
-    font-size: 5vw;
-}
-.lightbox-close-button:hover {
-    cursor: pointer;
-}
 .basic-content-elements h1{
     font-family: "Noto Sans Bold";
     font-size: 2em;
     margin: 5%;
 }
+
 .basic-content-elements p{
     font-size: 1em;
     width: 80%;
@@ -168,8 +97,36 @@ em {
 
     padding-left: 10%;
 }
+
+.chart-lightbox {
+    background-color:#282828d9;
+    display: none; 
+    z-index: 999; 
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw; 
+    top: 0; 
+    left: 0; 
+    overflow: auto;
+}
+
+.lightbox-close-button {
+    position: absolute; 
+    right: 10%; 
+    top: 10%; 
+    color: white; 
+    font-size: 5vw;
+}
+
+.lightbox-close-button:hover {
+    cursor: pointer;
+}
+
 #top-page-button {
-    color: #fabd2f;
+    color: #d3869b;
     font-size: 3vw;
     position: fixed;
 
@@ -178,17 +135,19 @@ em {
     right: 0;
     bottom: 5vw;
     z-index: 999;
-    text-shadow: 0 0.15vw 0.5vw rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 0.15vw 0.05vw black);
 
     display: none;
     opacity: 0;
     align-items: center;
     justify-content: center;
 }
+
 #top-page-button:hover {
     color: #b8bb26;
     cursor: pointer;
 }
+
 #navbar {
     background-color:#504945;
     position: fixed;
@@ -204,9 +163,13 @@ em {
     justify-content: right;
 
     z-index: 5;
+
+    box-shadow: 0 0.25vw 0.5vw black;
 }
+
 #navbar-buttons-container { 
     position: relative;
+
     width: 30%;
     height: 10vh;
     z-index: 3;
@@ -217,6 +180,11 @@ em {
     align-items: center;
     justify-content: center;
 }
+
+#navbar-buttons-container h1 {
+    font-size: max(2.5vw, 70%);
+}
+
 #resources-wrapper {
     height: 100%;
     flex: 1;
@@ -227,6 +195,7 @@ em {
     color: #d3869b;
     margin-left: 2%
 }
+
 #contact-container-wrapper {
     height: 100%;
     width: 50%;
@@ -236,11 +205,13 @@ em {
     justify-content: space-evenly;
     margin: 0 0 0 1%;
 }
+
 #phone, #email {
     display: flex;
     font-size: 1vw; 
     margin: 0 0 0 2.5%;
 }
+
 #about, #projects, #interests {
     color: #ebdbb2;
     box-shadow: none;
@@ -248,14 +219,17 @@ em {
 
     padding-bottom: 1vh;
 }
+
 #about:hover, #projects:hover, #interests:hover {
     color: #b8bb26;
 }
+
 #about-content, #projects-content, #interests-content {
     overflow: hidden;
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
+
     display: none;
     flex-direction: column;
     align-items: center;
@@ -268,15 +242,13 @@ em {
 
     position: relative;
     padding-top: 10vh;
-    width: 90%;
+    width: 100%;
     height: 100%;
     flex: 2 1 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    box-shadow: 0 5px 1em rgb(0, 0, 0);
 }
 
 #loading {
@@ -294,4 +266,41 @@ em {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#hello-grid {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 50%;
+}
+
+#music-grid {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 30% 30% 30%;
+
+    justify-content: center;
+}
+
+#food-grid {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 60%;
+
+    justify-content: center;
 }
