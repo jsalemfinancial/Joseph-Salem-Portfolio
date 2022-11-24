@@ -1,12 +1,33 @@
 // Event Listeners
 
-window.addEventListener("load", function() {
+window.addEventListener("load", async () => {
     document.getElementById("loading").style.display= "none";
 
-    // fetch('http://example.com/movies.json')
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data));
-    
+    await fetch('https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/main-content.html')
+        .then((response) => response.text())
+        .then((content) => {
+            document.getElementById("main-content-box").innerHTML = content;
+
+            var texScript = document.createElement("script");
+            texScript .type = "text/Javascript";
+            texScript .innerHTML = "MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}}";
+            document.body.appendChild(texScript );
+
+            var polyFillScript = document.createElement("script");
+            polyFillScript.type = "text/Javascript";
+            polyFillScript.src = "https://polyfill.io/v3/polyfill.min.js?features=es6";
+            document.body.appendChild(polyFillScript);
+
+            var mathJaxScript = document.createElement("script");
+            mathJaxScript.type = "text/Javascript";
+            mathJaxScript.id = "Mathjax-script";
+            mathJaxScript.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+            document.body.appendChild(mathJaxScript);
+
+        }).catch((error) => {
+            alert('Content failed to load!', error);
+        });
+
     document.getElementsByClassName("navbar-button")[0].style.boxShadow = "0 -0.5vh 0 #b8bb26 inset"; //Initial selected tab.
     TabSelector.pageSelect(0);
 
