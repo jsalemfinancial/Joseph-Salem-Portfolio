@@ -3,7 +3,7 @@
 window.addEventListener("load", async () => {
     document.getElementById("loading").style.display= "none";
 
-    await fetch('https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/main-content.html')
+    await fetch('https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/main_content.html')
         .then((response) => response.text())
         .then((content) => {
             document.getElementById("main-content-box").innerHTML = content;
