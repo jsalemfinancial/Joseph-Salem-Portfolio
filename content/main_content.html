@@ -274,8 +274,34 @@
         </p>
 
         <p>
+            That is, the data should be approximately normal, and should contain no outliers. Furthermore, the signifance of the data should
+            be tested due to the nature of noise in random/stochastic varaiables. The solutions to these issues is actually simple enough!
+        </p>
+
+        <p>
             That is, the data should be approximately Normal, and should contain no outliers. Furthermore, the signifance of the data should
-            be tested due to the nature of noise in random/stochastic varaiables.
+            be tested due to the nature of noise in random/stochastic varaiables. The solutions to these issues is actually simple enough!
+        </p>
+
+        <p>
+            Stock <em>price</em> data in particular is considered log-normally distributed; more precisely, larger moves in price
+            are less likely to occur the smaller the price of the asset is. While it is easy to get away with saying that large samples from
+            stock price data will be approximately normal, the fact that stock price is assumed to be log-normal is actually a benefit; we can
+            simply take the log of the price data!
+        </p>
+
+        <p>
+            Next, we may conduct a t-statistic test on the collected correlation coefficient. This can be simply done:
+
+            <span class="equation">\[
+                t = 
+                \rho \sqrt{(n - 2)/(1 - \rho^2)}
+                \]
+            </span>
+        </p>
+
+        <p>
+            The main problem I ran into when building these improvements came from TradingView's platform
         </p>
 
         <span class="chart-lightbox">
