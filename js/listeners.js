@@ -2,6 +2,10 @@
 
 window.addEventListener("load", function() {
     document.getElementById("loading").style.display= "none";
+
+    // fetch('http://example.com/movies.json')
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
     
     document.getElementsByClassName("navbar-button")[0].style.boxShadow = "0 -0.5vh 0 #b8bb26 inset"; //Initial selected tab.
     TabSelector.pageSelect(0);
