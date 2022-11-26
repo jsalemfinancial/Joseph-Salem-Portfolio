@@ -20,6 +20,16 @@ window.addEventListener('load', async () => {
             mathJaxScript.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
             document.body.appendChild(mathJaxScript);
 
+            var pageClasses = document.createElement("script");
+            pageClasses.type = "text/Javascript";
+            pageClasses.src = "page_classes.js";
+            document.body.appendChild(pageClasses);
+
+            var listeners = document.createElement("script");
+            listeners.type = "text/Javascript";
+            listeners.src = "listeners.js";
+            document.body.appendChild(listeners);
+
         }).catch((error) => {
             alert('Content failed to load!', error);
         });
