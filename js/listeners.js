@@ -1,6 +1,6 @@
 // Event Listeners
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
     document.getElementById("loading").style.display= "none";
 
     document.getElementsByClassName("navbar-button")[0].style.boxShadow = "0 -0.5vh 0 #b8bb26 inset"; //Initial selected tab.
