@@ -22,12 +22,12 @@ window.addEventListener('load', async () => {
 
             var pageClasses = document.createElement("script");
             pageClasses.type = "text/Javascript";
-            pageClasses.src = "./page_classes.js";
+            pageClasses.src = "js/page_classes.js";
             document.body.appendChild(pageClasses);
 
             var listeners = document.createElement("script");
             listeners.type = "text/Javascript";
-            listeners.src = "./listeners.js";
+            listeners.src = "js/listeners.js";
             document.body.appendChild(listeners);
 
         }).catch((error) => {
