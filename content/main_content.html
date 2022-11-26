@@ -305,21 +305,29 @@
         </p>
 
         <p>
-            The main problem I ran into when building these improvements came from TradingView's platform
+            The main problem I ran into when building these improvements came from TradingView's platform not having any built in Cumulative Distribution Functions or table for the 
+            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Student%27s_t-distribution">student T-distribution</a>. However, a handy little approximation found in 
+            section 26.2.17 of <a class="u-link" target="_blank" href="https://www.cs.bham.ac.uk/~aps/research/projects/as/resources/AandS-a4-v1-2.pdf">Handbook of Mathematical Functions</a>
+            aids us in calculating the probability values for normal CDFs. This is helpful becuase if we restrict ourselves to "large enough" sample sizes (convention is 30), then we may use 
+            a normal CDF in place of a t-distribution as an accurate practical application. The aforementioned approximation can be seen applied in the provide chart script. Extra points go 
+            to the readers who recognized the approximation as a Taylor series approximation.
         </p>
 
-        <span class="chart-lightbox">
-            <span class="lightbox-close-button">&times;</span>
-
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            var tradingview_embed_options = {};
-            tradingview_embed_options.width = '720';
-            tradingview_embed_options.height = '480';
-            tradingview_embed_options.chart = 'f2O1fJQL';
-            new TradingView.chart(tradingview_embed_options);
-            </script>
-        </span>
+        <p>Click here for a chart: 
+            
+            <span class="chart-lightbox">
+                <span class="lightbox-close-button">&times;</span>
+    
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                var tradingview_embed_options = {};
+                tradingview_embed_options.width = '720';
+                tradingview_embed_options.height = '480';
+                tradingview_embed_options.chart = 'f2O1fJQL';
+                new TradingView.chart(tradingview_embed_options);
+                </script>
+            </span>
+        </p>
     </div>
 
     <hr class="section-divider">
