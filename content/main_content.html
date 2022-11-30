@@ -309,6 +309,11 @@
         </p>
 
         <p>
+            Note that while TradingView does have a "good enough" Pearson Correlation analysis script, the method in which this script is written also allows for ranking data and finding
+            the <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman Correlation Coefficient</a>.<br><br>
+        </p>
+
+        <p>
             Click here for an example: <i class="fa fa-area-chart chart-button"></i>
         </p>
 
@@ -365,7 +370,30 @@
         <h1>Project #8: A WoW Crafting App </h1>
 
         <p>
-            This was a request from a friend of a friend. It started off. . .
+            This was a request from a friend. It started off as a simple calculator and turned into a full blown partnership with the World of Warcraft
+            streamer/content creator <a class="u-link" target="_blank" href="https://www.twitch.tv/jedith">Jedith</a>. The web app, made for World of Warcraft's <em>Dragonflight<em> update,
+            originally just gave an estimate of "crafts" needed to trigger a random event that benefited the player.<br><br>
+        </p>
+
+        <p>
+            I collected some data from the aforementioned friend's closed=beta game session and eventually figured out the formulas for the parameters involved with the crafting
+            system's random event. Of course, the World of Warcraft developers changed the system about two time before the official launch, but the core principals remained the same.<br><br>
+        </p>
+
+        <p>
+            This experience cemented my love for programming and applications development in general. I believe that if I were alive in a different time period, I would
+            do well as a blacksmith; I derive great satisfaction from creating tools for the use of others or myself!<br><br>
+        </p>
+
+        <p>
+            That said, the project was not without challenges. Since this work reflects Jedith's brand, he had been quite demanding (in a positive sense) with
+            the overall polish and features of the site. I learned skills that reached outside of the scope of web development, namely: communication, quality control, and creativity.
+            Having to develop a few work arounds and accounting for all possible confusions that may occur (that is, assuming the most user error as possible) had also been a tiring yet
+            rewarding experience, and had pushed me to make implementations that would help secure the longevity of the project.
+        </p>
+
+        <p>
+            Check out the site on my GitHub or <a class="u-link" target="_blank" href="https://forgecraft.io">here</a>.
         </p>
     </div>
 
@@ -375,7 +403,35 @@
         <h1>Project #9: Michigan RD-108 Form Automation</h1>
 
         <p>
-            My parents own a small car dealership and have to frequently fill RD-108 forms. 
+            My parents own a small car dealership and have to frequently fill RD-108 forms. My mother, being more socially proficient than my step-father, handles all of the
+            Secretary of State paperwork involved in closing a car sale. While the state of Michigan does provide an automated Adobe form, the nature of my parents' business has them provide
+            incentives to their customers by combinding all of the extraneous costs of the sale into the final sale price of the vehicle, which is called the "out-the-door" price. This is big
+            tax headache as not everything is taxable and some things can count as deductions. The Adobe form, sadly, does not perform the necessary calculations in this direction.<br><br>
+        </p>
+
+        <p>
+            While the mathematics behind the calculations can be easily autoamted with a spreadsheet, my mother is not mathematically inclined and struggles with new technology
+            (that is, anything not social media related). She has so far manageg to break three versions of the spreadsheet program that I had made for her, even with some of
+            the new iterations including translations to Arabic.<br><br>
+        </p>
+
+        <p>
+            So I embarked on a task to figured out the best way to make a solution that she could not possibly messs up. This proved challenging at first, as the form
+            has some requirements about the way it should be presented; that is, it's best to turn in the form filled via Adobe's framework. I was certainly no
+            Adobe developer, but the internet had a solution for me: pdf libraries. While I have used one in the past on a C++ project, the hardest part was finding an
+            open-source/free library that meshed well with Adobe's form formatting.<br><br>
+        </p>
+
+        <p>
+            Luckily I ran into the library <a class="u-link" target="_blank" href="https://pdf-lib.js.org">PDF-LIB</a>, which worked off of TypeScript and compiled in JavaScript.
+            Despite the lack of a server-side, I decided to use this library in <em>Node.js<em> and using <a class="u-link" target="_blank" href="https://www.electronjs.org">Electron.js</a>
+            to build a web-like GUI. The main reasons for doing this revolved around: offline access, familrity of visuals, and ease of access. My mother can feel like she is using a
+            browser program, without any of the distractions or hassels of a browser! Although this might seem silly and over-kill, you should see her working with tehcnology in the office.<br><br>
+        </p>
+
+        <p>
+            The programs section of my GitHub provides the key Electron files and the main script which accesses the RD-108 PDF file. Note that you will need to scaffold your own
+            Electron project and install PDF-LIB along with its dependencies.
         </p>
     </div>
 </div>
