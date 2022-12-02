@@ -287,10 +287,9 @@
     height: 100%;
 
     display: grid;
-    grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 30% 30% 30%;
-
-    justify-content: center;
+    grid-template-columns: repeat(3, 1em);
+    grid-auto-rows: minmax(1em, auto);
+    gap: max(1vw, 1vh);
 }
 
 #food-grid {
