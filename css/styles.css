@@ -295,9 +295,6 @@
 #food-grid {
     position: relative;
 
-    width: 100%;
-    height: 100%;
-
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-auto-rows: minmax(5vh, auto);
