@@ -1,4 +1,4 @@
-document.body.addEventListener('load', async () => {
+document.body.addEventListener('onload', async () => {
     await fetch('https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/main_content.html')
         .then((response) => response.text())
         .then((content) => {
