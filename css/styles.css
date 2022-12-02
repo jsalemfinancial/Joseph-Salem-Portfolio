@@ -299,8 +299,7 @@
     height: 100%;
 
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 60%;
-
-    justify-content: center;
+    grid-template-columns: repeat(3, 10vw);
+    grid-auto-rows: minmax(5vh, auto);
+    gap: max(1vw, 1vh);
 }
