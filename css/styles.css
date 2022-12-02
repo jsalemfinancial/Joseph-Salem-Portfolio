@@ -287,8 +287,8 @@
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(3, 1em);
-    grid-auto-rows: minmax(1em, auto);
+    grid-template-columns: repeat(3, 5vw);
+    grid-auto-rows: minmax(5vh, auto);
     gap: max(1vw, 1vh);
 }
 
