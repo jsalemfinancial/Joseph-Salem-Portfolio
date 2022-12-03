@@ -13,6 +13,10 @@ let TabSelector = new class TabSelector {
             };
         };
     }
+
+    exists() {
+        console.log("Tab Selector Ready.");
+    }
 }
 
 let Chart = new class Chart {
