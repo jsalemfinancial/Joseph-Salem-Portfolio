@@ -16,6 +16,10 @@
     text-decoration: underline;
 }
 
+.u-link:hover {
+    color: #b8bb26;
+}
+
 .flex-divider-horizontal {
     height: 0;
     flex-basis: 100%;

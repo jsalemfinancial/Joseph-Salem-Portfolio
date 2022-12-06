@@ -68,15 +68,13 @@
             <h1>Projects and Scripts</h1>
 
             <p>
-                Here you will find small scripts and explanations of projects that you can locate in my GitHub *Make link* page.
+                Here you will find small scripts and explanations of projects that you can locate in my GitHub page (click the icon in the top left corner!)
                 These range from simple applications of Python libraries, Python analytical scripts, and financial/technical analysis scripts written in PineScript.<br><br>
             </p>
 
             <p>
                 Each PineScript project will include an interactive asset graph from TradingView. PineScript is the programming language developed by TradingView
-                to analyze and visualize timeseries for financial asset data; click the little <i class="fa fa-area-chart"></i> icon to bring it up! 
-				
-				<br><br> *include links to each project*
+                to analyze and visualize timeseries for financial asset data; click the little <i class="fa fa-area-chart"></i> icon to bring it up!
             </p>
         </span>
     </div>
@@ -88,9 +86,9 @@
 
             <p>
                 <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Relative_strength_index">Relative Strength Index</a>
-                (RSI) is a technical analysis tool first developed by 
+                is a technical analysis tool first developed by 
                 <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/J._Welles_Wilder_Jr.">J. Welles Wilder Jr.</a> 
-                and published in his book <em>New Concepts in Technical Analysis</em>. A copy of this book is avaible for free online 
+                and published in his book <em>New Concepts in Technical Analysis.</em> A copy of this book is avaible for free online 
                 and is a short and interesting read; you will find many other popular analysis tools/methods and the reasoning behind 
                 their construction. Wilder is often considered the "Father of Technical Analysis" for his contributions to the field.<br><br>
             </p>
@@ -102,7 +100,7 @@
             </p>
 
             <p>
-                The <span class="equation">$RSI$</span>, along with subsequent mathy notation in paragraph* is calculated as follows:
+                The RSI is calculated as follows:
 
                 <span class="equation">\[RSI = 100 - \frac{100}{1 + RS}\]</span>
             </p>
@@ -110,7 +108,7 @@
             <p>
                 Here, <span class="equation">$RS$</span> is the Relative Strength Factor and is the ratio of the
                 <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Moving_average">moving averages</a> of
-                upward changes and downward chasnges, where each move is calculated as follows:
+                upward changes and downward changes, where each move is calculated as follows:
 
                 <span class="equation">
                     \[
@@ -138,15 +136,14 @@
             </p>
 
             <p>
-                <span class="equation">$EMA$</span> stands for Exponential Moving Average, which weighs a series of data (typically) using a factor of 
+                EMA stands for Exponential Moving Average, which weighs a series of data (typically) using a factor of 
                 <span class="equation">$\alpha = \frac{2}{N+1}$</span>. Here, <span class="equation">$\alpha$</span> is called the
                 degree of weight decrease or smoothing factor, and there is no "correct" value to use for any of the weighted moving averages.
-                The value used for the <span class="equation">$EMA$</span> is such that it's centering is equal to that of a Simple Moving Average (SMA).<br><br>
+                The value used for the EMA is such that it's centering is equal to that of a Simple Moving Average (SMA).<br><br>
             </p>
 
             <p>
-                Click here for an example I made in PineScript (found also on
-                <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>): <i class="fa fa-area-chart chart-button"></i>
+                Click here for an example: <i class="fa fa-area-chart chart-button"></i>
             </p>
 
             <span class="chart-lightbox">
@@ -169,29 +166,28 @@
         <h1>Project #2: Price Percentage Oscillator</h1>
 
         <p>
-            <a class="u-link" target="_blank" href="https://www.investopedia.com/terms/p/ppo.asp">Price Percentage Oscillator</a> (PPO) is a technical indicator that shows a ratio between a "short" and "long"
-            moving averages, typically Exponential Moving Averages (EMA), relating to price. The periods of these moving averages
+            <a class="u-link" target="_blank" href="https://www.investopedia.com/terms/p/ppo.asp">Price Percentage Oscillator</a>, or PPO, is a technical indicator that shows a ratio between a "short" and "long"
+            moving averages (typically Exponential Moving Averages) relating to price. The periods of these moving averages
             can vary, but the typical formula is:
 
             <span class="equation">\[PPO = \frac{EMA_{12} - EMA_{26}}{EMA_{26}} \times 100\]</span>    
         </p>
 
         <p>
-            Whenever the indicator is greater than 0, then the 12-period EMA, <span class="equation">$EMA_{12}$</span>, is greater than the
-            26-period EMA, <span class="equation">$EMA_{26}$</span>, by that percentage; whenever the indicator is less than 0, then vice versa. <br><br>  
+            Whenever the indicator is greater than 0, then the 12-period EMA is greater than the 26-period EMA by that percentage;
+            whenever the indicator is less than 0, then vis versa.   
         </p>
 
         <p>
-            I incorporate a momentum indicator along with the <span class="equation">$PPO$</span> that is similar in style to the 
+            I personally incorporate a momentum indicator along with the PPO that is similar in style to the 
             <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/MACD">Moving Average Convergence/Divergence</a>
             indicator, wherein a <em>signal</em> moving average is used to assist in identifying convergence and divergence moves.
             I typically use a very short moving average for the signal line and visually judge the momentum of the trends by a colored area
-            difference between the <span class="equation">$PPO$</span> line and the signal line.<br><br>
+            difference between the PPO line and the signal line.<br><br>
         </p>
 
         <p>
-            Click here for an example I made in PineScript (also found on 
-            <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>): <i class="fa fa-area-chart chart-button"></i>
+            Click here for an example: <i class="fa fa-area-chart chart-button"></i>
         </p>
 
         <span class="chart-lightbox">
@@ -214,13 +210,13 @@
         <h1>Project #3: On-Balance-Volume Momentum Oscillator</h1>
 
         <p>
-            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/On-balance_volume">On-Balance-Volume</a> (OBV)
+            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/On-balance_volume">On-Balance-Volume</a> , or OBV
             is a technical indicator popularized by <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Joseph_Granville">Joseph Granville</a>
             which tracks a relationship between price and volume.<br><br>
         </p>
 
         <p>
-            <span class="equation">$OBV$</span> can be calculated with the piecewise function:
+            OBV can be calculated with the piecewise function:
 
             <span class="equation">\[
                 OBV = OBV_{prev} + \begin{cases}
@@ -233,21 +229,10 @@
         </p>
 
         <p>
-            This adds up volume measures depending on whether the price closed higher or lower. The idea is to give a data value
-            that helps to measure the importance/strength of price movements. It is based on the premise held by Granville that volume
-            movements precede price movements; essentially, large movements in volume should cause large movements in price. <br><br>
+            This essentially adds up volume measures depending on whether the price closed higher or lower. The idea is to give a data value
+            that helps to measure the importance/strength of price movements. It is based on the premise held by Joseph Granville that volume
+            movements precede price movements; essentially, large movements in volume should cause large movements in price.
         </p>
-		
-        <p>
-            My modified version of this indicator turns it into an oscillator by taking the difference between the
-            <span class="equation">$OBV$</span> value itself and a short term moving average. This acts as a very
-            basic filtering technique and allows for momentum analysis. Furthermore, long and short period moving averages
-            are also added that analyze this new oscillating value.
-        </p>
-		<p> 
-            Click here for an example I made in PineScript (also found on 
-            <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>): <i class="fa fa-area-chart chart-button"></i>
-		</p>
 
         <span class="chart-lightbox">
             <span class="lightbox-close-button">&times;</span>
@@ -276,7 +261,7 @@
 
         <p>
             The most commonly used parameter with financial instruments is the
-            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson Correlation Coefficient</a> *(put in symbol for rho here)*.
+            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson Correlation Coefficient</a>.
             It is calculated as such:
 
             <span class="equation">\[
@@ -300,13 +285,13 @@
 
         <p>
             Stock <em>price</em> data in particular is considered log-normally distributed; more precisely, larger moves in price
-            are less likely to occur as the price of the asset gets smaller. While it is easy to get away with saying that large samples from
+            are less likely to occur the smaller the price of the asset is. While it is easy to get away with saying that large samples from
             stock price data will be approximately normal, the fact that stock price is assumed to be log-normal is actually a benefit; we can
-            simply take the log of the price data!<br><br>
+            simply take the log of the price data!<br>
         </p>
 
         <p>
-            Next, we may conduct a <em>critical value test on the t-statistic</em>, or t-test on the collected correlation coefficient. This can be done:<br>
+            Next, we may conduct a t-statistic test on the collected correlation coefficient. This can be simply done:<br>
 
             <span class="equation">\[
                 t = 
@@ -317,11 +302,11 @@
 
         <p>
             The main problem I ran into when building these improvements came from TradingView's platform not having any built in Cumulative Distribution Functions or table for the 
-            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Student%27s_t-distribution">Student's t-distribution</a>. However, a handy little approximation found in 
+            <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Student%27s_t-distribution">student T-distribution</a>. However, a handy little approximation found in 
             section 26.2.17 of <a class="u-link" target="_blank" href="https://www.cs.bham.ac.uk/~aps/research/projects/as/resources/AandS-a4-v1-2.pdf">Handbook of Mathematical Functions</a>
-            aids us in calculating the probability values for normal <em>Cumulative Distribution Functions</em>, or <em>CDFs</em> for short.
-            This is helpful because if we restrict ourselves to "large enough" sample sizes (convention is >30), then we may use a normal CDF in place of a t-distribution as an accurate practical application.
-            The aforementioned approximation can be seen applied in the provided chart script. Extra points go to the readers who recognized the approximation as a Taylor series approximation.<br><br>
+            aids us in calculating the probability values for normal CDFs. This is helpful becuase if we restrict ourselves to "large enough" sample sizes (convention is 30), then we may use 
+            a normal CDF in place of a t-distribution as an accurate practical application. The aforementioned approximation can be seen applied in the provide chart script. Extra points go 
+            to the readers who recognized the approximation as a Taylor series approximation.<br><br>
         </p>
 
         <p>
@@ -330,8 +315,7 @@
         </p>
 
         <p>
-            Click here for an example I made in PineScript (also found on 
-            <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>): <i class="fa fa-area-chart chart-button"></i>
+            Click here for an example: <i class="fa fa-area-chart chart-button"></i>
         </p>
 
         <span class="chart-lightbox">
@@ -357,51 +341,11 @@
             Options contracts are a type of derivative security. We can fetch and analyze <a class="u-link" target="_blank" href="https://www.investopedia.com/terms/o/option.asp">options-chain</a> 
             data using the YFinance Python package. With the help of the pandas package, this program essentially gives a breakdown of the information granted by the 
             <a class="u-link" target="_blank" href="https://en.wikipedia.org/wiki/Black–Scholes_model">Black-Scholes Equation</a>. The Black-Scholes model is what underlies the pricing of
-            options contracts world-wide. Although it is ill-suited for pricing American options, it is one of those scenarios where "good enough" is acceptably precise. <br><br>
+            options contracts world-wide. Although it is ill-suited for pricing American options, it is one of those scenarios where "good enough" is acceptably precise.
         </p>
 
         <p>
-            I tend to trade options strategies often in my portfolio. Most of my knowledge is built off of the book <em>Trading Volatility</em> by Colin Bennett.
-            A primary factor I look for in options is the current <em>Implied Volatility</em>. Having taken a college course in Mathematical Finance, I know the
-            tedium and complexity that goes into applying the Black-Scholes Equation. This is why we get computers and "good enough" approximations to do it for us!
-        </p>
-
-        <p>
-            <a class="u-link" target="_blank" href="">Newton Interpolation</a> is a simple approximation method that assumes the model at hand
-            follows a <em>polynomial</em> (which applies in our situation) and calculates the coefficients of the polynomial using the derivative
-            of the model and <em>divided differences</em>. If you recall Taylor polynomials, this should look very familiar! The program that I
-            wrote utilizes four guesses and 100 iterations of Newton Interpolation to accurately approximation the Black-Scholes formula for
-            the given option type. As you will notice within the script, the (partial) derivative is not terribly difficult to find when
-            trying to solve for implied volatility; the different partial derivatives of the Black-Scholes Equation are known as
-            <em>The Greeks</em>. An important relationship to note when performing this is <em>Put-Call Parity</em>, which helps when
-            requiring to evaluate Black-Scholes during each iteration of the approximation. The relationship states:
-
-            <span class="equation">\[
-                C - P = D(F - K)
-                \]
-            </span>
-        </p>
-
-        <p>
-            Here, <span class="equation">C</span> is the call price and <span class="equation">P</span> is put price. The parameter
-            <span class="equation">D</span> is the discount factor, which is calculated based on current interest rates and accounts for
-            the returns missed by not allocating the price value into fixed-income strategies such as bonds. Finally, <span class="equation">F</span>
-            is the forward price of the actual asset (the stock), and <span class="equation">K</span> is the options strike price. Note that forward price
-            is tradtionally used as it "cancels" out with the discount factor. The forward price is essentially the return on the asset price given the
-            return-on-investment rate of fixed-income strategies.
-        </p>
-
-        <p>
-            After solving for Implied Volatility, the program then creates a table using pandas for analysis; A few more parameters are
-            calcualted within the script. I calcualte for <em>Historical Volatility<em>, which is the actualized volatility of the asset, as well
-            as the <em>beta</em> value and <em>Pearson Correlation Coefficient</em> for the asset's return price. Here, beta is simply
-            the return that the asset gives compared to another benchmark asset; simply put it calculates that percentage that the asset performs
-            compared to the benchmark.
-        </p>
-
-        <p>
-            You can get the full script yourself and play around with it from my
-            <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>
+            I tend to trade options strategies often in my portfolio. Most of my knowledge is built off of the book <em>Trading Volatility</em> by. . .
         </p>
     </div>
 
@@ -424,11 +368,6 @@
             that allow more advanced manipulation of the MySQL server. Eventually, if I ever return to terrorize the <em>Grand Exchange</em>, I would like to create a personal application similar to
             the service that GE Tracker provides!
         </p>
-
-        <p>
-            You can find and use the full script (with some token modifications that you must put in) on my 
-            <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>!
-        </p>
     </div>
 
     <hr class="section-divider">
@@ -444,7 +383,7 @@
 
         <p>
             I collected some data from the aforementioned friend's closed=beta game session and eventually figured out the formulas for the parameters involved with the crafting
-            system's random event. Of course, the World of Warcraft developers changed the system about two times before the official launch, but the core principals remained the same.<br><br>
+            system's random event. Of course, the World of Warcraft developers changed the system about two time before the official launch, but the core principals remained the same.<br><br>
         </p>
 
         <p>
@@ -455,13 +394,12 @@
         <p>
             That said, the project was not without challenges. Since this work reflects Jedith's brand, he had been quite demanding (in a positive sense) with
             the overall polish and features of the site. I learned skills that reached outside of the scope of web development, namely: communication, quality control, and creativity.
-            Having to develop a few work-arounds and accounting for all possible confusions that may occur (that is, assuming the most user error as possible) had also been a tiring yet
-            rewarding experience, and had pushed me to make implementations that would help secure the longevity of the project. <br><br>
+            Having to develop a few work arounds and accounting for all possible confusions that may occur (that is, assuming the most user error as possible) had also been a tiring yet
+            rewarding experience, and had pushed me to make implementations that would help secure the longevity of the project.
         </p>
 
         <p>
-            Check out the site on my <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>
-            or <a class="u-link" target="_blank" href="https://forgecraft.io">here</a>.
+            Check out the site on my GitHub or <a class="u-link" target="_blank" href="https://forgecraft.io">here</a>.
         </p>
     </div>
 
@@ -471,20 +409,20 @@
         <h1>Project #8: Michigan RD-108 Form Automation</h1>
 
         <p>
-            My parents own a small car dealership and have to frequently fill RD-108 forms. My mother is usually the one responsible for handling all of the
-            Secretary of State paperwork involved in closing a car sale. While the state of Michigan does provide an automated Adobe form that calculates the taxes,
-            the nature of my parents' business has them provide incentives to their customers by combinding all of the extraneous costs of the sale into the final sale price of the vehicle, which is called the "out-the-door" price.
-            This is a big tax-calculation headache, as not everything is taxable and some things can count as deductions. The Adobe form, sadly, does not perform the necessary calculations based on being given the end price.<br><br>
+            My parents own a small car dealership and have to frequently fill RD-108 forms. My mother, being more socially proficient than my step-father, handles all of the
+            Secretary of State paperwork involved in closing a car sale. While the state of Michigan does provide an automated Adobe form, the nature of my parents' business has them provide
+            incentives to their customers by combinding all of the extraneous costs of the sale into the final sale price of the vehicle, which is called the "out-the-door" price. This is big
+            tax headache as not everything is taxable and some things can count as deductions. The Adobe form, sadly, does not perform the necessary calculations in this direction.<br><br>
         </p>
 
         <p>
             While the mathematics behind the calculations can be easily autoamted with a spreadsheet, my mother is not mathematically inclined and struggles with new technology
-            (that is, anything not social media related). So far, she has managed to break three versions of the spreadsheet program that I had made for her, even with some of
-            the new iterations including translations to Arabic (her first language).<br><br>
+            (that is, anything not social media related). She has so far manageg to break three versions of the spreadsheet program that I had made for her, even with some of
+            the new iterations including translations to Arabic.<br><br>
         </p>
 
         <p>
-            So, I embarked on a task to figured out the best way to make a solution that she could not possibly mess up. This proved challenging at first, as the form
+            So I embarked on a task to figured out the best way to make a solution that she could not possibly messs up. This proved challenging at first, as the form
             has some requirements about the way it should be presented; that is, it's best to turn in the form filled via Adobe's framework. I was certainly no
             Adobe developer, but the internet had a solution for me: pdf libraries. While I have used one in the past on a C++ project, the hardest part was finding an
             open-source/free library that meshed well with Adobe's form formatting.<br><br>
@@ -493,14 +431,13 @@
         <p>
             Luckily I ran into the library <a class="u-link" target="_blank" href="https://pdf-lib.js.org">PDF-LIB</a>, which worked off of TypeScript and compiled in JavaScript.
             Despite the lack of a server-side, I decided to use this library in <em>Node.js</em> and using <a class="u-link" target="_blank" href="https://www.electronjs.org">Electron.js</a>
-            to build a web-like GUI. The main reasons for doing this revolved around offline access, familiarity of visuals, and ease of use. My mother can feel like she is using a
+            to build a web-like GUI. The main reasons for doing this revolved around: offline access, familrity of visuals, and ease of access. My mother can feel like she is using a
             browser program, without any of the distractions or hassels of a browser! Although this might seem silly and over-kill, you should see her working with tehcnology in the office.<br><br>
         </p>
 
         <p>
-            The programs section of my <a class="u-link" target="_blank" href="https://github.com/jsalemfinancial">GitHub</a>
-            provides the key Electron files and the main script which accesses the RD-108 PDF file. 
-            Note that you will need to scaffold your own Electron project and install PDF-LIB along with its dependencies/node modules. <br><br>
+            The programs section of my GitHub provides the key Electron files and the main script which accesses the RD-108 PDF file. Note that you will need to scaffold your own
+            Electron project and install PDF-LIB along with its dependencies/node modules.
         </p>
     </div>
 </div>
