@@ -22,8 +22,6 @@ let TabSelector = new class TabSelector {
 let Chart = new class Chart {
     constructor() {
         this.currentLightbox = document.getElementsByClassName("chart-lightbox");
-        this.chartSrcs = ["", "https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/ppo_chart.html", "", ""]
-        // this.preloadcharts();
     }
     
     loadChartLightbox(index) {
@@ -34,22 +32,6 @@ let Chart = new class Chart {
     unloadChartLightbox(index) {
         this.currentLightbox[index].style.display = "none";
         document.getElementsByTagName("body")[0].style.overflowY = "auto";
-    }
-
-    async preloadcharts() {
-        var chartFrame = document.createElement("div");
-        chartFrame.style.backgroundColor = "red";
-        chartFrame.style.width = "50vw";
-        chartFrame.style.height = "50vh";
-
-        for (var i = 0; i < this.currentLightbox.length; i++) {
-            await fetch("https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/ppo_chart.html")
-            .then((response) => response.text())
-            .then((source) => this.currentLightbox[i].appendChild(source))
-            .catch((error) => {
-                console.log('Failed to retrieve chart!', error);
-            });
-        };
     }
 }
 
