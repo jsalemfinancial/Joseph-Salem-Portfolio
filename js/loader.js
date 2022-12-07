@@ -24,11 +24,6 @@ function loadTex() {
             mathJaxScript.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
             document.body.appendChild(mathJaxScript);
 
-            var tradingViewScript = document.createElement("script");
-            tradingViewScript.type = "text/Javascript";
-            tradingViewScript.src = "https://s3.tradingview.com/tv.js";
-            document.body.appendChild(tradingViewScript);
-
             clearInterval(texRecalls);
         } else {
             console.log("Retrying TeX. . .");
@@ -73,6 +68,24 @@ function loadListeners() {
     }, 50);
 };
 
+function loadTradingView() {
+    console.log("Loading TradingView. . .");
+
+    var tradingViewRecalls = setInterval(() => {
+        try {
+
+            var tradingViewScript = document.createElement("script");
+            tradingViewScript.type = "text/Javascript";
+            tradingViewScript.src = "https://s3.tradingview.com/tv.js";
+            document.body.appendChild(tradingViewScript);
+
+            clearInterval(tradingViewRecalls);
+        } catch (error) {
+            console.log("Retrying TradingView. . .");
+        };
+    }, 50);
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
     await fetch('https://raw.githubusercontent.com/jsalemfinancial/Website/main/content/main_content.html')
         .then((response) => response.text())
@@ -80,6 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .then(() => loadTex())
         .then(() => loadClasses())
         .then(() => loadListeners())
+        .then(() => loadTradingView())
         .catch((error) => {
             alert('Content failed to load!', error);
         });
