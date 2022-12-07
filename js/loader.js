@@ -24,6 +24,11 @@ function loadTex() {
             mathJaxScript.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
             document.body.appendChild(mathJaxScript);
 
+            var tradingViewScript = document.createElement("script");
+            tradingViewScript.type = "text/Javascript";
+            tradingViewScript.src = "https://s3.tradingview.com/tv.js";
+            document.body.appendChild(tradingViewScript);
+
             clearInterval(texRecalls);
         } else {
             console.log("Retrying TeX. . .");
@@ -39,7 +44,6 @@ function loadClasses() {
 
             var pageClasses = document.createElement("script");
             pageClasses.type = "text/Javascript";
-            pageClasses.id = "pageclasses-script";
             pageClasses.src = "js/page_classes.js";
             document.body.appendChild(pageClasses);
 
