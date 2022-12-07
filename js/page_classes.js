@@ -22,7 +22,7 @@ let TabSelector = new class TabSelector {
 let Chart = new class Chart {
     constructor() {
         this.currentLightbox = document.getElementsByClassName("chart-lightbox");
-        this.chartSrcs = ["", "tradingview_embed_options.chart = '8lG8WCwV';", "", ""]
+        this.chartSrcs = ["js/rsi_chart.js", "js/rsi_chart.js", "js/rsi_chart.js", "js/rsi_chart.js"]
         this.preloadcharts();
     }
     
@@ -39,11 +39,9 @@ let Chart = new class Chart {
     preloadcharts() {
         var chartScript = document.createElement("script");
         chartScript.type = "text/Javascript";
-        chartScript.src = "var tradingview_embed_options = {};tradingview_embed_options.width = '600';tradingview_embed_options.height = '600';";
 
         for (var i = 0; i < this.currentLightbox.length; i++) {
-            chartScript.src += this.chartSrcs[i];
-            chartScript.src += "new TradingView.chart(tradingview_embed_options);"
+            chartScript.src = this.chartSrcs[0];
             this.currentLightbox[i].appendChild(chartScript);
         };
     }
