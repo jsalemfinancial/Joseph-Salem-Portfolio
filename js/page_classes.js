@@ -31,7 +31,7 @@ let Chart = new class Chart {
 
     unloadChartLightbox(index) {
         this.currentLightbox[index].style.display = "none";
-        document.getElementsByTagName("body")[0].style.overflow = "auto";
+        document.getElementsByTagName("body")[0].style.overflowY = "auto";
     }
 }
 
