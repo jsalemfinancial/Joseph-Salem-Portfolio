@@ -42,7 +42,7 @@ let Chart = new class Chart {
         chartScript.src = "var tradingview_embed_options = {};tradingview_embed_options.width = '50%';tradingview_embed_options.height = '50%';";
 
         for (var i = 0; i < this.currentLightbox.length; i++) {
-            chartScript.src += chartSrcs[index];
+            chartScript.src += this.chartSrcs[index];
             chartScript.src += "new TradingView.chart(tradingview_embed_options);"
             currentLightbox[i].appendChild(chartScript);
         };
