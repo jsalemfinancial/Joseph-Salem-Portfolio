@@ -54,7 +54,6 @@ document.querySelectorAll(".chart-button").forEach(overlay => {
 
 document.querySelectorAll(".lightbox-close-button").forEach(overlay => {
     overlay.addEventListener("click", function(event) {
-        console.log("click!");
         for (var i = 0; i < document.getElementsByClassName("lightbox-close-button").length; i++) {
             if (document.getElementsByClassName("lightbox-close-button")[i] == event.target) {
                 Chart.unloadChartLightbox(i);
