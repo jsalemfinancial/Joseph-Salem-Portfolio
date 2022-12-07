@@ -22,6 +22,7 @@ let TabSelector = new class TabSelector {
 let Chart = new class Chart {
     constructor() {
         this.currentLightbox = document.getElementsByClassName("chart-lightbox");
+        this.chartSrcs = ["", "tradingview_embed_options.chart = '8lG8WCwV';", "", ""]
         this.preloadcharts();
     }
     
@@ -36,7 +37,15 @@ let Chart = new class Chart {
     }
 
     preloadcharts() {
-        console.log("Charts Pre-loaded");
+        var chartScript = document.createElement("script");
+        chartScript.type = "text/Javascript";
+        chartScript.src = "var tradingview_embed_options = {};tradingview_embed_options.width = '50%';tradingview_embed_options.height = '50%';";
+
+        for (var i = 0; i < this.currentLightbox.length; i++) {
+            chartScript.src += chartSrcs[index];
+            chartScript.src += "new TradingView.chart(tradingview_embed_options);"
+            currentLightbox[i].appendChild(chartScript);
+        };
     }
 }
 
