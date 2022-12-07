@@ -31,24 +31,6 @@ function loadTex() {
     }, 50);
 };
 
-function loadTradingView() {
-    console.log("Loading TradingView. . .");
-
-    var tradingViewRecalls = setInterval(() => {
-        try {
-
-            var tradingViewScript = document.createElement("script");
-            tradingViewScript.type = "text/Javascript";
-            tradingViewScript.src = "https://s3.tradingview.com/tv.js";
-            document.body.appendChild(tradingViewScript);
-
-            clearInterval(tradingViewRecalls);
-        } catch (error) {
-            console.log("Retrying TradingView. . .");
-        };
-    }, 50);
-};
-
 function loadClasses() {
     console.log("Loading Classes. . .");
 
@@ -91,7 +73,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         .then((response) => response.text())
         .then((content) => setContent(content))
         .then(() => loadTex())
-        .then(() => loadTradingView())
         .then(() => loadClasses())
         .then(() => loadListeners())
         .catch((error) => {

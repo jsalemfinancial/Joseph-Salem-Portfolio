@@ -36,13 +36,9 @@ let Chart = new class Chart {
         document.getElementsByTagName("body")[0].style.overflowY = "auto";
     }
 
-    preloadcharts() {
-        var chartScript = document.createElement("script");
-        chartScript.type = "text/Javascript";
-
+    async preloadcharts() {
         for (var i = 0; i < this.currentLightbox.length; i++) {
-            chartScript.src = this.chartSrcs[0];
-            this.currentLightbox[i].appendChild(chartScript);
+            
         };
     }
 }
