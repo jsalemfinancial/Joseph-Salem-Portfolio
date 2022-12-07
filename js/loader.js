@@ -56,7 +56,7 @@ function loadListeners() {
 
     var listenersRecalls = setInterval(() => {
         try {
-            console.log(TabSelector, Chart, MusicList, FoodGrid, GameReview, "Loaded!");
+            console.log(TabSelector, MusicList, FoodGrid, GameReview, "Loaded!");
 
             var listeners = document.createElement("script");
             listeners.type = "text/Javascript";
