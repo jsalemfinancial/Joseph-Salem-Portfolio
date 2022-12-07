@@ -39,7 +39,7 @@ let Chart = new class Chart {
     preloadcharts() {
         var chartScript = document.createElement("script");
         chartScript.type = "text/Javascript";
-        chartScript.src = "var tradingview_embed_options = {};tradingview_embed_options.width = '50%';tradingview_embed_options.height = '50%';";
+        chartScript.src = "var tradingview_embed_options = {};tradingview_embed_options.width = '600';tradingview_embed_options.height = '600';";
 
         for (var i = 0; i < this.currentLightbox.length; i++) {
             chartScript.src += this.chartSrcs[i];
