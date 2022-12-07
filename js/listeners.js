@@ -43,9 +43,9 @@ document.querySelectorAll(".navbar-button").forEach(tab => {
 
 document.querySelectorAll(".chart-button").forEach(overlay => {
     overlay.addEventListener("click", function(event) {
-        console.log("click!");
         for (var i = 0; i < document.getElementsByClassName("chart-button").length; i++) {
             if (document.getElementsByClassName("chart-button")[i] == event.target) {
+                console.log("chart", i, "loaded")
                 Chart.loadChartLightbox(i);
             };
         };
