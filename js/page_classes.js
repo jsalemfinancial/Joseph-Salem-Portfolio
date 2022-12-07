@@ -22,7 +22,7 @@ let TabSelector = new class TabSelector {
 let Chart = new class Chart {
     constructor() {
         this.currentLightbox = document.getElementsByClassName("chart-lightbox");
-        preloadcharts();
+        this.preloadcharts();
     }
     
     loadChartLightbox(index) {
@@ -36,7 +36,7 @@ let Chart = new class Chart {
     }
 
     preloadcharts() {
-        
+        console.log("Charts Pre-loaded");
     }
 }
 
