@@ -44,7 +44,7 @@ let Chart = new class Chart {
         for (var i = 0; i < this.currentLightbox.length; i++) {
             chartScript.src += this.chartSrcs[i];
             chartScript.src += "new TradingView.chart(tradingview_embed_options);"
-            currentLightbox[i].appendChild(chartScript);
+            this.currentLightbox[i].appendChild(chartScript);
         };
     }
 }
