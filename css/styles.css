@@ -296,6 +296,17 @@
     gap: max(5vw, 5vh);
 }
 
+#music-grid span, #music-grid p {
+    white-space: pre;
+    
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #food-grid {
     position: relative;
 
@@ -303,8 +314,4 @@
     grid-template-columns: repeat(3, 10vw);
     grid-auto-rows: minmax(5vh, auto);
     gap: max(1vw, 1vh);
-}
-
-#food-grid p {
-    padding-left: -10%;
 }
