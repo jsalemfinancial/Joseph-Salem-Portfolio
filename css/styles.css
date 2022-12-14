@@ -293,7 +293,7 @@
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-auto-rows: minmax(5vh, auto);
-    gap: max(1vw, 1vh);
+    gap: max(5vw, 5vh);
 }
 
 #food-grid {
