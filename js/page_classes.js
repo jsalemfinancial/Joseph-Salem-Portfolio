@@ -35,19 +35,7 @@ let TabSelector = new class TabSelector {
 //     }
 // }
 
-let MusicList = new class MusicList {
-    constructor() {
-        
-    }
-}
-
 let FoodGrid = new class FoodGrid {
-    constructor() {
-        
-    }
-}
-
-let GameReview = new class GameReview {
     constructor() {
         
     }
