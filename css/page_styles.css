@@ -60,9 +60,8 @@ h1 {
 
 p {
     font-family: "Noto Sans";
-
-    word-break: break-all;
-    white-space: normal;
+    
+    white-space: pre;
 }
 
 a {
