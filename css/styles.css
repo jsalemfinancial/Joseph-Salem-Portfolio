@@ -296,9 +296,27 @@
     gap: max(5vw, 5vh);
 }
 
-#music-grid span, #music-grid p {
+#music-grid span {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#music-grid iframe {
+    position: relative;
+    width: 100%;
+}
+
+#music-grid p {
     white-space: pre;
+    background-color: blue;
     
+    max-width: 30%;
     padding: 0;
 
     display: flex;
