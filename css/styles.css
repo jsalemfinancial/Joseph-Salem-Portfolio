@@ -284,11 +284,22 @@
     grid-template-rows: 40% 50%;
 }
 
+#music-grid-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#music-grid-container p {
+    white-space: pre;
+
+    flex: 1;
+    padding: 0;
+}
+
 #music-grid {
     position: relative;
 
-    width: 100%;
-    height: 100%;
+    flex: 4;
 
     display: grid;
     grid-template-columns: repeat(3, 10vw);
@@ -314,9 +325,7 @@
 
 #music-grid p {
     white-space: pre;
-    background-color: blue;
-    
-    max-width: 30%;
+
     padding: 0;
 
     display: flex;
