@@ -317,6 +317,8 @@
 #food-grid {
     position: relative;
 
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -329,6 +331,9 @@
 }
 
 #food-grid > span {
-    position: relative;
-    width: 100%;
+    background-color: red;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Shiitake_mushroom_in_Vegetable_store_in_Yuen_Long.jpg/512px-Shiitake_mushroom_in_Vegetable_store_in_Yuen_Long.jpg");
+
+    height: 20%;
+    width: 90%;
 }
