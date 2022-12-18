@@ -295,12 +295,12 @@
 
 #music-grid iframe {
     position: relative;
-    aspect-ratio: 1/1;
 
+    aspect-ratio: 1/1;
     width: 100%;
 
     border: max(0.5vw, 0.5vh) solid #83a598;
-    border-radius: 50%;
+    border-radius: 10% / 10%;
 }
 
 #music-grid p {
@@ -317,8 +317,18 @@
 #food-grid {
     position: relative;
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-auto-rows: minmax(5vh, auto);
-    gap: max(1vw, 1vh);
+    gap: max(1vw, 1vh); */
+}
+
+#food-grid > span {
+    position: relative;
+    width: 100%;
 }
