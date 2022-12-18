@@ -89,7 +89,6 @@
 
 .basic-content-elements p {
     font-size: 1em;
-    width: 80%;
     color: #83a598;
 
     overflow-wrap: break-word;
@@ -295,8 +294,6 @@
 
 #music-grid-container > p {
     flex: 1;
-    padding: 0;
-    margin: 0;
     
     /* display: flex;
     flex-direction: column;
@@ -304,7 +301,6 @@
 }
 
 #music-grid {
-    background-color: rebeccapurple;
     position: relative;
 
     flex: 4;
@@ -313,6 +309,8 @@
     grid-template-columns: repeat(3, 10vw);
     grid-auto-rows: minmax(5vh, auto);
     gap: max(5vw, 5vh);
+
+    justify-content: center;
 }
 
 #music-grid span {
