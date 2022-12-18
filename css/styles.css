@@ -298,9 +298,9 @@
     padding: 0;
     margin: 0;
     
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 
 #music-grid {
