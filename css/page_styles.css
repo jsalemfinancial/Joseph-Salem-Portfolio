@@ -61,7 +61,7 @@ h1 {
 p {
     font-family: "Noto Sans";
     text-align: left;
-    text-justify: inter-character;
+    /* text-justify: inter-word; */
     white-space: pre-wrap;
     overflow-wrap: break-word;
 }
