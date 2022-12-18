@@ -332,8 +332,6 @@
 }
 
 #music-grid p {
-    white-space: pre;
-
     padding: 0;
 
     display: flex;

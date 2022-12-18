@@ -60,7 +60,7 @@ h1 {
 
 p {
     font-family: "Noto Sans";
-    white-space: pre-wrap;
+    white-space: pre-line;
     overflow-wrap: break-word;
 }
 
