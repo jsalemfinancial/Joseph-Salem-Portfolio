@@ -282,6 +282,10 @@
     grid-template-rows: 40% 50%;
 }
 
+#hello-grid p {
+    background-color: red;
+}
+
 #music-grid-container {
     position: relative;
     
