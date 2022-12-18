@@ -19,24 +19,12 @@ let TabSelector = new class TabSelector {
     }
 }
 
-// let Chart = new class Chart {
-//     constructor() {
-//         this.currentLightbox = document.getElementsByClassName("chart-lightbox");
-//     }
-    
-//     loadChartLightbox(index) {
-//         this.currentLightbox[index].style.display = "flex";
-//         document.getElementsByTagName("body")[0].style.overflow = "hidden";
-//     }
-
-//     unloadChartLightbox(index) {
-//         this.currentLightbox[index].style.display = "none";
-//         document.getElementsByTagName("body")[0].style.overflowY = "auto";
-//     }
-// }
-
 let FoodGrid = new class FoodGrid {
     constructor() {
-        
+        this.setImages()
+    }
+
+    setImages() {
+
     }
 }

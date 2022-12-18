@@ -331,9 +331,9 @@
 }
 
 #food-grid > span {
-    background-color: red;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Shiitake_mushroom_in_Vegetable_store_in_Yuen_Long.jpg/512px-Shiitake_mushroom_in_Vegetable_store_in_Yuen_Long.jpg");
+    background-size: cover;
 
-    height: 20%;
+    height: 10vh;
     width: 90%;
 }
