@@ -29,7 +29,7 @@ let FoodGrid = new class FoodGrid {
     setImages() {
         var ingrdtCard = document.getElementById("food-grid").getElementsByTagName("span");
 
-        for (i = 0; i < ingrdtCard.length; i++) {
+        for (var i = 0; i < ingrdtCard.length; i++) {
             ingrdtCard[i].style.backgroundImage = "url(" + this.foodLinks[i] + ")";
         };
     }
