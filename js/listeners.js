@@ -43,11 +43,8 @@ document.querySelectorAll(".navbar-button").forEach(tab => {
 
 document.getElementById("food-grid").querySelectorAll("p").forEach(card => {
     card.addEventListener("click", function(event) {
-        for (var i = 0; i < document.getElementById("food-grid").getElementsByClassName("span").length; i++) {
-            if (document.getElementById("food-grid").getElementsByClassName("span")[i] == event.target) {
-                FoodGrid.expandCard(i);
-            };
-        };
+        console.log(event.target.innerText);
+        FoodGrid.expandCard(event.target.innerText);
     });
 });
 
