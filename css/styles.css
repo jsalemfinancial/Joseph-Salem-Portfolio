@@ -331,8 +331,8 @@
 }
 
 #food-grid > span {
-    background-size: cover;
+    background-size:contain;
 
     height: 10vh;
-    width: 90%;
+    width: 100%;
 }
