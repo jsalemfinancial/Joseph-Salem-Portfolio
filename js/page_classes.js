@@ -32,7 +32,7 @@ let FoodGrid = new class FoodGrid {
         for (var i = 0; i < this.ingrdtCard.length; i++) {
             if (index == Object.keys(this.foodLinks)[i]) {
                 console.log("worked!");
-                this.ingrdtCard[i].style.padding = "10%";
+                this.ingrdtCard[i].style.padding = "0 0 0 10%";
             } else {
                 this.ingrdtCard[i].style.padding = "0 0 0 0";
             };
