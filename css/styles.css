@@ -332,10 +332,7 @@
 
 #food-grid > span {
     background-size: cover;
-    background-position: 50% 50%;
 
     height: 0;
     width: 90%;
-
-    padding-bottom: 0%;
 }
