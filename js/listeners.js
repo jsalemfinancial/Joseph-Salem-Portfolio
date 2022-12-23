@@ -41,7 +41,7 @@ document.querySelectorAll(".navbar-button").forEach(tab => {
     });
 });
 
-document.getElementById("food-grid").querySelectorAll("p").forEach(card => {
+document.getElementById("food-cards-titles").querySelectorAll("p").forEach(card => {
     card.addEventListener("click", function(event) {
         console.log(event.target.innerText);
         FoodGrid.expandCard(event.target.innerText);

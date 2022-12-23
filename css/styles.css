@@ -323,16 +323,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* display: grid;
-    grid-template-columns: repeat(3, 10vw);
-    grid-auto-rows: minmax(5vh, auto);
-    gap: max(1vw, 1vh); */
 }
 
-#food-grid > span {
-    background-size: cover;
+#food-cards-titles {
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+}
 
-    height: 0;
-    width: 90%;
+#food-cards-titles > p {
+    border: 0.1vw solid red;
+}
+
+#food-cards-content {
+    position: relative;
+    
+    background-size: cover;
+    background-position: 40%;
+}
+
+#food-cards-content p {
+    background-color: #1212123b;
 }
