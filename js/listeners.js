@@ -43,8 +43,13 @@ document.querySelectorAll(".navbar-button").forEach(tab => {
 
 document.getElementById("food-cards-titles").querySelectorAll("p").forEach(card => {
     card.addEventListener("click", function(event) {
-        console.log(event.target.innerText);
         FoodGrid.expandCard(event.target.innerText);
+    });
+});
+
+document.getElementById("game-reviews-panels").querySelectorAll("span").forEach(button => {
+    button.getElementsByTagName("p").addEventListener("click", function(event) {
+        GameReviews.slider(event.target.innerText);
     });
 });
 

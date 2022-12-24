@@ -38,18 +38,31 @@ let FoodGrid = new class FoodGrid {
 
 let GameReviews = new class GameReviews {
     constructor() {
+        this.counter = 0;
         this.reviews = document.getElementById("game-reviews-panels").getElementsByTagName("div");
-        this.initPanels();
+        this.renderPanel(this.counter);
     }
 
-    initPanels() {
+    renderPanel(counter) {
         for (var i = 0; i < this.reviews.length; i++) {
-            if (i == 0) {
+            if (i == counter) {
                 this.reviews[i].style.display = "flex";
             } else {
                 this.reviews[i].style.display = "none";
             };
         };
+    }
+
+    slider(direction) {
+        if (direction == "&#8249;") {
+            this.counter -= 1;
+            this.counter = this.counter % this.reviews.length;
+        } else {
+            this.counter += 1;
+            this.counter = this.counter % this.reviews.length;
+        };
+
+        this.renderPanel(this.counter);
     }
 
 }

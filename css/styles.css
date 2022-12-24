@@ -368,18 +368,39 @@
 #game-reviews-panels {
     position: relative;
 
-    width: 90%;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+#game-reviews-panels video {
+    width: 80%;
+}
+
+#game-reviews-panels h2, #game-reviews-panels p {
+    padding: 5%;
 }
 
 #game-reviews-panels > div {
-    flex: 2
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #game-reviews-panels > span {
-    flex: 1
+    font-size: max(5vw, 5vh);
+    cursor: pointer;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
