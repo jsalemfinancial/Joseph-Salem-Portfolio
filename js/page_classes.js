@@ -48,7 +48,7 @@ let GameReviews = new class GameReviews {
                 this.reviews[i].style.display = "flex";
             } else {
                 this.reviews[i].style.display = "none";
-            }
+            };
         };
     }
 

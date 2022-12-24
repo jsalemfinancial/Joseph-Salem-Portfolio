@@ -375,3 +375,11 @@
     align-items: center;
     justify-content: space-around;
 }
+
+#game-reviews-panels > div {
+    flex: 2
+}
+
+#game-reviews-panels > span {
+    flex: 1
+}
