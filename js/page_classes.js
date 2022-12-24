@@ -30,8 +30,26 @@ let FoodGrid = new class FoodGrid {
     expandCard(index) {
         for (var i = 0; i < this.ingrdtCard.length; i++) {
             if (index == Object.keys(this.foodLinks)[i]) {
-                this.ingrdtCardContent[i].style.backgroundImage = "url(" + this.foodLinks[this.ingrdtCard[i].innerText] + ")";
+                this.ingrdtCardContent.style.backgroundImage = "url(" + this.foodLinks[this.ingrdtCard[i].innerText] + ")";
             };
         };
     }
+}
+
+let GameReviews = new class GameReviews {
+    constructor() {
+        this.reviews = document.getElementById("game-reviews-panels").getElementsByTagName("div");
+        this.initPanels();
+    }
+
+    initPanels() {
+        for (var i = 0; i < this.reviews.length; i++) {
+            if (i == 0) {
+                this.reviews[i].style.display = "flex";
+            } else {
+                this.reviews[i].style.display = "none";
+            }
+        };
+    }
+
 }

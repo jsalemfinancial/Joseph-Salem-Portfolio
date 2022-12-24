@@ -317,7 +317,7 @@
 #food-grid {
     position: relative;
 
-    width: 100%;
+    width: 90%;
 
     display: flex;
     flex-direction: column;
@@ -328,21 +328,50 @@
 #food-cards-titles {
     position: relative;
     
+    align-self:flex-start;
     display: flex;
     flex-direction: row;
 }
 
 #food-cards-titles > p {
     border: 0.1vw solid red;
+    background-color: rebeccapurple ;
+    border-bottom: 0;
+    padding: 5% 10% 5% 10%;
 }
 
 #food-cards-content {
     position: relative;
-    
     background-size: cover;
     background-position: 40%;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    
+    border: 0.1vw solid red;
 }
 
-#food-cards-content p {
-    background-color: #1212123b;
+#food-cards-content > p {
+    position: relative;
+
+    width: 40%;
+    background-color: #1212129f;
+}
+
+#game-reviews-panels {
+    position: relative;
+
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
