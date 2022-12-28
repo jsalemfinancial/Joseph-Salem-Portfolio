@@ -47,8 +47,8 @@ document.getElementById("food-cards-titles").querySelectorAll("p").forEach(card 
     });
 });
 
-document.getElementById("game-reviews-panels").querySelectorAll("span").forEach(button => {
-    button.getElementsByTagName("p").addEventListener("click", function(event) {
+document.getElementById("game-reviews-panels").querySelectorAll("span p").forEach(button => {
+    button.addEventListener("click", function(event) {
         GameReviews.slider(event.target.innerText);
     });
 });
