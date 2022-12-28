@@ -334,10 +334,12 @@
 }
 
 #food-cards-titles > p {
-    border: 0.1vw solid red;
-    background-color: rebeccapurple ;
-    border-bottom: 0;
+    cursor: pointer;
+
     padding: 5% 10% 5% 10%;
+
+    border: 0.1vw solid red;
+    border-bottom: 0;
 }
 
 #food-cards-content {
@@ -360,9 +362,14 @@
 
 #food-cards-content > p {
     position: relative;
+    background-color: #1212129f;
 
     width: 40%;
-    background-color: #1212129f;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #game-reviews-panels {
@@ -380,7 +387,7 @@
     width: 80%;
 }
 
-#game-reviews-panels h2, #game-reviews-panels p {
+#game-reviews-panels h2 {
     padding: 5%;
 }
 

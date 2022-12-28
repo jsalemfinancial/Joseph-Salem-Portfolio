@@ -31,6 +31,9 @@ let FoodGrid = new class FoodGrid {
         for (var i = 0; i < this.ingrdtCard.length; i++) {
             if (index == Object.keys(this.foodLinks)[i]) {
                 this.ingrdtCardContent.style.backgroundImage = "url(" + this.foodLinks[this.ingrdtCard[i].innerText] + ")";
+                this.ingrdtCardContent.getElementsByTagName("p")[i].style.display = "flex";
+            } else {
+                this.ingrdtCardContent.getElementsByTagName("p")[i].style.display = "none";
             };
         };
     }
