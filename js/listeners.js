@@ -52,24 +52,3 @@ document.getElementById("game-reviews-panels").querySelectorAll("span p").forEac
         GameReviews.slider(event.target.innerText);
     });
 });
-
-// document.querySelectorAll(".chart-button").forEach(overlay => {
-//     overlay.addEventListener("click", function(event) {
-//         for (var i = 0; i < document.getElementsByClassName("chart-button").length; i++) {
-//             if (document.getElementsByClassName("chart-button")[i] == event.target) {
-//                 console.log("chart", i, "loaded")
-//                 Chart.loadChartLightbox(i);
-//             };
-//         };
-//     });
-// });
-
-// document.querySelectorAll(".lightbox-close-button").forEach(overlay => {
-//     overlay.addEventListener("click", function(event) {
-//         for (var i = 0; i < document.getElementsByClassName("lightbox-close-button").length; i++) {
-//             if (document.getElementsByClassName("lightbox-close-button")[i] == event.target) {
-//                 Chart.unloadChartLightbox(i);
-//             };
-//         };
-//     });
-// });
