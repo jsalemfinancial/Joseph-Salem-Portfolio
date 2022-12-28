@@ -360,7 +360,7 @@
     border: 0.1vw solid red;
 }
 
-#food-cards-content > div {
+#food-cards-content > p {
     position: relative;
     background-color: #1212129f;
 

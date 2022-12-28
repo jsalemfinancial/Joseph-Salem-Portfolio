@@ -25,23 +25,18 @@ let FoodGrid = new class FoodGrid {
 
         this.ingrdtCard = document.getElementById("food-grid").getElementsByTagName("p");
         this.ingrdtCardContent = document.getElementById("food-cards-content");
-        this.foodLinksKeys = Object.keys(this.foodLinks);
     }
 
     expandCard(index) {
         for (var i = 0; i < this.ingrdtCard.length; i++) {
-            if (index == this.foodLinksKeys[i]) {
+            if (index == i) {
+                console.log(index, i);
                 this.ingrdtCardContent.style.backgroundImage = "url(" + this.foodLinks[this.ingrdtCard[i].innerText] + ")";
-                this.ingrdtCardContent.getElementsByTagName("p")[i].style.display = "flex";
+                this.ingrdtCardContent.getElementsByTagName("div")[i].style.display = "flex";
             } else {
-                this.ingrdtCardContent.getElementsByTagName("p")[i].style.display = "none";
+                console.log(index, i);
+                this.ingrdtCardContent.getElementsByTagName("div")[i].style.display = "none";
             };
-        };
-    }
-
-    initGrid() {
-        for (var i = 0; i < this.ingrdtCard.length; i++) {
-            this.ingrdtCardContent.getElementsByTagName("p")[i].style.display = "none";
         };
     }
 }
