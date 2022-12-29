@@ -43,8 +43,7 @@ document.querySelectorAll(".navbar-button").forEach(tab => {
 
 document.getElementById("food-cards-titles").querySelectorAll("p").forEach(card => {
     card.addEventListener("click", function(event) {
-        console.log(event.dataset.indexNumber);
-        FoodGrid.expandCard(event.dataset.indexNumber);
+        FoodGrid.expandCard(event.target.dataset.index);
     });
 });
 
