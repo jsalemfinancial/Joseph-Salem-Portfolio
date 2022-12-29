@@ -316,7 +316,7 @@
 
 #food-grid {
     position: relative;
-    background-color: royalblue;
+    font-size: max(1vw, 1vh);
 
     width: 100%;
 
@@ -328,8 +328,7 @@
 
 #food-cards-titles {
     position: relative;
-    background-color: green;
-    
+
     width: 50%;
 
     display: flex;
@@ -337,14 +336,16 @@
 }
 
 #food-cards-titles > p {
+    background-color: green;
     position: relative;
     cursor: pointer;
 
-    padding: 5% 10% 5% 10%;
-    width: 100%;
+    padding: 2%;
 
-    border: 0.1vw solid red;
-    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #food-cards-content {
@@ -358,16 +359,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    border: 0.1vw solid red;
 }
 
 #food-cards-content > p {
     position: relative;
     background-color: #1212129f;
 
-    width: 40%;
-    padding: 5%;
+    width: 50%;
+    margin: 10%;
+    padding: 10%;
 
     display: none;
     flex-direction: column;
