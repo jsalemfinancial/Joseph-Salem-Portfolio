@@ -328,12 +328,13 @@
 #food-cards-titles {
     position: relative;
     
-    align-self:flex-start;
     display: flex;
     flex-direction: row;
+    /* align-self: flex-start; */
 }
 
 #food-cards-titles > p {
+    position: relative;
     cursor: pointer;
 
     padding: 5% 10% 5% 10%;

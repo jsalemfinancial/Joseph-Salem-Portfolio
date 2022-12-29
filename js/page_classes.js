@@ -25,6 +25,8 @@ let FoodGrid = new class FoodGrid {
 
         this.ingrdtCard = document.getElementById("food-cards-titles").getElementsByTagName("p");
         this.ingrdtCardContent = document.getElementById("food-cards-content");
+
+        this.expandCard(Object.keys(this.foodLinks)[0]);
     }
 
     expandCard(index) {
