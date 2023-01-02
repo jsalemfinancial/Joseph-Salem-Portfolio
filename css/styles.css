@@ -300,7 +300,7 @@
     width: 100%;
 
     border: max(0.5vw, 0.5vh) solid #83a598;
-    border-radius: 10% / 10%;
+    border-radius: 16px/16px;
 }
 
 #music-grid p {
@@ -336,11 +336,17 @@
 }
 
 #food-cards-titles > p {
-    background-color: green;
     position: relative;
     cursor: pointer;
 
     padding: 2%;
+    margin: 0 2% 0 0;
+
+    border: max(0.25vw, 0.25vh) solid #ebdbb2;
+    border-bottom: 0;
+    box-sizing: border-box;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 
     display: flex;
     flex-direction: column;
@@ -354,6 +360,16 @@
     background-position: 40%;
 
     width: 50%;
+
+    border: max(0.25vw, 0.25vh) solid #ebdbb2;
+    border-bottom: 0;
+    border-right: 0;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    box-sizing: border-box;
+    border-style: outset;
 
     display: flex;
     flex-direction: column;
