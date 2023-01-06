@@ -299,7 +299,7 @@
     aspect-ratio: 1/1;
     width: 100%;
 
-    border: max(0.5vw, 0.5vh) solid #83a598;
+    border: max(0.25vw, 0.25vh) solid #83a598;
     border-radius: 16px/16px;
 }
 
@@ -316,7 +316,6 @@
 
 #food-grid {
     position: relative;
-    font-size: max(1vw, 1vh);
 
     width: 100%;
 
@@ -329,7 +328,7 @@
 #food-cards-titles {
     position: relative;
 
-    width: 50%;
+    width: 70%;
 
     display: flex;
     flex-direction: row;
@@ -342,7 +341,7 @@
     padding: 2%;
     margin: 0 2% 0 0;
 
-    border: max(0.25vw, 0.25vh) solid #ebdbb2;
+    border: max(0.1vw, 0.1vh) solid #ebdbb2;
     border-bottom: 0;
     box-sizing: border-box;
     border-top-left-radius: 8px;
@@ -359,9 +358,9 @@
     background-size: cover;
     background-position: 40%;
 
-    width: 50%;
+    width: 70%;
 
-    border: max(0.25vw, 0.25vh) solid #ebdbb2;
+    border: max(0.1vw, 0.1vh) solid #ebdbb2;
     border-bottom: 0;
     border-right: 0;
 
@@ -379,11 +378,11 @@
 
 #food-cards-content > p {
     position: relative;
-    background-color: #1212129f;
+    background-color: #121212ab;
 
     width: 50%;
-    margin: 10%;
-    padding: 10%;
+    margin: 5%;
+    padding: 5%;
 
     display: none;
     flex-direction: column;
