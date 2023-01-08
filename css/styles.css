@@ -399,7 +399,8 @@
 
 #food-cards-content > p {
     position: relative;
-    background-color: #121212ab;
+    color: #92c1af;
+    background-color: #121212bb;
 
     width: 50%;
     margin: 5%;
