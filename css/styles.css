@@ -255,6 +255,27 @@
     grid-template-rows: 40% 50%;
 }
 
+#hello-grid > h1 {
+    grid-area: 1/1/span 1/span 1;
+}
+
+#hello-grid > p {
+    grid-area: 2/1/span 1/span 1
+}
+
+#hello-grid > img {
+    position: relative;
+
+    width: 50%;
+    height: 100%;
+    
+    margin: 5vh auto;
+    border: max(0.25vw, 0.25vh) solid #83a598;
+    border-radius: 16px/16px;
+
+    grid-area: 1/2/span 2/span 1;
+}
+
 #music-grid-container {
     position: relative;
     
@@ -344,8 +365,8 @@
     border: max(0.1vw, 0.1vh) solid #ebdbb2;
     border-bottom: 0;
     box-sizing: border-box;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 8px/8px;
+    border-top-right-radius: 8px/8px;
 
     display: flex;
     flex-direction: column;
@@ -429,6 +450,7 @@
 
 #game-reviews-panels > span > p {
     position: relative;
+    color: #ebdbb2;
     font-size: max(5vw, 5vh);
     cursor: pointer;
     
@@ -436,4 +458,8 @@
     padding: 0;
 
     display: inline-block;
+}
+
+#game-reviews-panels > span > p:hover {
+    color: #b8bb26;
 }
