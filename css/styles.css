@@ -2,22 +2,22 @@
 
 .section-divider {
     border: none;
-    border-top: 2vh dotted #ebdbb2;
+    border-top: 2vh dotted var(--header-text-color);
 
     width: 90%;
 }
 
 .equation {
-    color: #d3869b;
+    color: var(--accent-secondary);
 }
 
 .u-link {
-    color: #fabd2f;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
 .u-link:hover {
-    color: #b8bb26;
+    color: var(--accent-primary);
 }
 
 .flex-divider-horizontal {
@@ -28,7 +28,7 @@
 .navbar-button {
     font-family: "Noto Sans Bold";
 
-    color: #ebdbb2;
+    color: var(--header-text-color);
     height: 9vh;
 
     position: relative;
@@ -53,23 +53,23 @@
 
 .fa-github {
     font-size: 5vw;
-    color: #fabd2f;
+    color: var(--link-color);
     filter: drop-shadow(-0.1vw 0.1vw 0.1vw black);
 }
 
 .fa-area-chart {
     font-size: 1em;
     max-width: 1em; 
-    color: #fabd2f;
+    color: var(--link-color);
 }
 
 .fa-github:hover, .fa-area-chart:hover {
-    color: #b8bb26;
+    color: var(--accent-primary);
     cursor: pointer;
 }
 
 .main-content-elements {
-    color: #ebdbb2;
+    color: var(--header-text-color);
 }
 
 .basic-content-elements {
@@ -89,7 +89,7 @@
 
 .basic-content-elements p {
     font-size: 1em;
-    color: #83a598;
+    color: var(--paragraph-text-color);
 
     overflow-wrap: break-word;
 
@@ -102,7 +102,7 @@
 }
 
 #top-page-button {
-    color: #d3869b;
+    color: var(--accent-secondary);
     font-size: 3vw;
     position: fixed;
 
@@ -120,12 +120,12 @@
 }
 
 #top-page-button:hover {
-    color: #b8bb26;
+    color: var(--accent-primary);
     cursor: pointer;
 }
 
 #navbar {
-    background-color:#504945;
+    background-color:var(--navbar-bg-color);
     position: fixed;
     
     top: 0;
@@ -168,7 +168,7 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    color: #d3869b;
+    color: var(--accent-secondary);
     margin-left: 2%
 }
 
@@ -189,15 +189,15 @@
 }
 
 #about, #projects, #interests {
-    color: #ebdbb2;
+    color: var(--header-text-color);
     box-shadow: none;
-    box-shadow: 0 -0.5vh 0 #fabd2f inset;
+    box-shadow: 0 -0.5vh 0 var(--link-color) inset;
 
     padding-bottom: 1vh;
 }
 
 #about:hover, #projects:hover, #interests:hover {
-    color: #b8bb26;
+    color: var(--accent-primary);
 }
 
 #about-content, #projects-content, #interests-content {
@@ -213,8 +213,7 @@
 }
 
 #main-content-box {
-    color: #EDF5E1;
-    background-color: #121212;
+    background-color: var(--main-content-bg-color);
 
     position: relative;
     padding-top: 10vh;
@@ -228,8 +227,8 @@
 }
 
 #loading {
-    background-color: #b8bb26;
-    color: #EDF5E1;
+    background-color: var(--accent-primary);
+    color: var(--header-text-color);
     font-size: 5em;
 
     position: fixed;
@@ -269,7 +268,7 @@
     width: 60%;
     
     margin: 5vh auto;
-    border: max(0.25vw, 0.25vh) solid #83a598;
+    border: max(0.25vw, 0.25vh) solid var(--paragraph-text-color);
     border-radius: 16px/16px;
 
     grid-area: 1/2/span 2/span 1;
@@ -319,7 +318,7 @@
     aspect-ratio: 1/1;
     width: 100%;
 
-    border: max(0.25vw, 0.25vh) solid #83a598;
+    border: max(0.25vw, 0.25vh) solid var(--paragraph-text-color);
     border-radius: 16px/16px;
 }
 
@@ -361,7 +360,7 @@
     padding: 2%;
     margin: 0 2% 0 0;
 
-    border: max(0.1vw, 0.1vh) solid #ebdbb2;
+    border: max(0.1vw, 0.1vh) solid var(--header-text-color);
     border-bottom: 0;
     box-sizing: border-box;
     border-top-left-radius: 8px;
@@ -380,7 +379,7 @@
 
     width: 70%;
 
-    border: max(0.1vw, 0.1vh) solid #ebdbb2;
+    border: max(0.1vw, 0.1vh) solid var(--header-text-color);
     border-bottom: 0;
     border-right: 0;
 
@@ -398,8 +397,7 @@
 
 #food-cards-content > p {
     position: relative;
-    color: #92c1af;
-    background-color: #121212bb;
+    background-color: var(--food-card-p-bg-color);
 
     width: 50%;
     margin: 5%;
@@ -423,6 +421,7 @@
 }
 
 #game-reviews-panels video {
+    position: relative;
     width: 80%;
 }
 
@@ -439,6 +438,12 @@
     justify-content: center;
 }
 
+#game-reviews-panels > div > p {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+}
+
 #game-reviews-panels > span {
     flex: 1;
 
@@ -450,7 +455,7 @@
 
 #game-reviews-panels > span > p {
     position: relative;
-    color: #ebdbb2;
+    color: var(--header-text-color);
     font-size: max(5vw, 5vh);
     cursor: pointer;
     
@@ -461,5 +466,5 @@
 }
 
 #game-reviews-panels > span > p:hover {
-    color: #b8bb26;
+    color: var(--accent-primary);
 }

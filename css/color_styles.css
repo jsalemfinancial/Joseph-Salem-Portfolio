@@ -1,0 +1,14 @@
+/* Color Variables */
+
+:root {
+    --accent-primary: #b8bb26;
+    --accent-secondary: #d3869b;
+    --link-color: #fabd2f;
+
+    --header-text-color: #ebdbb2;
+    --paragraph-text-color: #83a598;
+
+    --navbar-bg-color: #504945;
+    --main-content-bg-color: #121212;
+    --food-card-p-bg-color: #121212cc;
+}

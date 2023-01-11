@@ -33,18 +33,18 @@ body::-webkit-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #d3869b;
+    background-color: var(--accent-secondary);
     border-radius: 10em;
     -webkit-border-radius: 10em;
 }
 
 body {
     scrollbar-width: 0.5em;
-    scrollbar-color: #d3869b transparent;
+    scrollbar-color: var(--accent-secondary) transparent;
 
     margin: 0;
     height: 100%;
-    background-color: #ebdbb2;
+    background-color: var(--header-text-color);
     overflow-x: hidden;
 
     display: flex;
@@ -71,5 +71,5 @@ a {
 
 em {
     font-family: inherit;
-    color: #d3869b;
+    color: var(--accent-secondary);
 }
