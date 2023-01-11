@@ -57,10 +57,10 @@
     filter: drop-shadow(-0.1vw 0.1vw 0.1vw black);
 }
 
-.fa-envelope, .fa-phone, .fa-area-chart {
+.fa-area-chart {
     font-size: 1em;
     max-width: 1em; 
-    color: #d3869b;
+    color: #fabd2f;
 }
 
 .fa-github:hover, .fa-area-chart:hover {
@@ -266,8 +266,7 @@
 #hello-grid > img {
     position: relative;
 
-    width: 50%;
-    height: 100%;
+    width: 60%;
     
     margin: 5vh auto;
     border: max(0.25vw, 0.25vh) solid #83a598;
