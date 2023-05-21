@@ -75,16 +75,18 @@
 .basic-content-elements {
     position: relative;
     font-family: 'Noto Sans Regular';
-    width: 100%;
-    height: 100%;
 
-    margin: 0 0 5% 0;
+    width: 100%;
+    min-height: 100%;
+
+    margin: 0 5% 5% 0;
 }
 
 .basic-content-elements h1 {
     font-family: "Noto Sans Bold";
     font-size: 2em;
     margin: 5%;
+    background-color: red;
 }
 
 .basic-content-elements p {
@@ -99,6 +101,13 @@
     -ms-hyphens: auto;
 
     padding: 0 0 0 10%;
+}
+
+.basic-sub-container {
+    position: relative;
+
+    width: 100%;
+    background-color: blue;
 }
 
 #top-page-button {
@@ -247,11 +256,10 @@
     position: relative;
 
     width: 100%;
-    height: 100%;
 
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 40% 50%;
+    grid-template-rows: auto;
 }
 
 #hello-grid > h1 {
@@ -259,7 +267,7 @@
 }
 
 #hello-grid > p {
-    grid-area: 2/1/span 1/span 1
+    grid-area: 2/1/span 1/span 1;
 }
 
 #hello-grid > img {
