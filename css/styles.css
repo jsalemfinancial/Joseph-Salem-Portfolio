@@ -85,8 +85,6 @@
 .basic-content-elements h1 {
     font-family: "Noto Sans Bold";
     font-size: 2em;
-    margin: 5%;
-    background-color: red;
 }
 
 .basic-content-elements p {
@@ -103,11 +101,14 @@
     padding: 0 0 0 10%;
 }
 
-.basic-sub-container {
+.basic-subcontainer {
     position: relative;
 
     width: 100%;
-    background-color: blue;
+
+    margin: 5%;
+
+    display: inline-block;
 }
 
 #top-page-button {
@@ -256,6 +257,7 @@
     position: relative;
 
     width: 100%;
+    margin: 5%;
 
     display: inline-grid;
     grid-template-columns: 60% 40%;
