@@ -1,40 +1,32 @@
 /*Mobile Style Sheet*/
-@media only screen and (orientation: portrait),
-    only screen and (max-width: 900px) {
-        .basicContentElements p {
+@media only screen and (max-width: 767px) {
+        .basic-subcontainer p {
             font-size: 1.5vh;
         }
-        .basicContentElements h1 {
+
+        .basic-subcontainer h1 {
             font-size: 3vh;
         }
 
-        div > .fa-envelope {
-            font-size: 2vh; 
-        }
-
-        div > .fa-phone {
-            font-size: 2vh; 
-        }
-
         .fa-github {
-            font-size: 6vw; 
+            font-size: 6vw;
         }
 
         #about, #projects, #interests{
             font-size: 2vh;
         }
-        #homeButton {
-            font-size: 3vh;
-        }
-        #slidesButtonLeft, #slidesButtonRight {
+
+        #slides-button-left, #slides-button-right {
             font-size: 3vh;
             width: 7%;
             max-height: 7%;
         }
-        #slidesButtonLeft {
+
+        #slides-button-left {
             margin-left: 1%;
         }
-        #slidesButtonRight {
+
+        #slides-button-right {
             margin-right: 1%;
         }
 }

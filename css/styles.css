@@ -9,6 +9,21 @@
 
 .equation {
     color: var(--accent-secondary);
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.equation > .MathJax {
+    height: 100% !important;
+    min-height: 100% !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    /* padding: 5% !important; */
+    /* This adds padding to inline highlighted math syntax. If height of MathJax containers becomes an issue, 
+    separate equation into two classes where one is called inline-equation. */
 }
 
 .u-link {
@@ -76,10 +91,15 @@
     position: relative;
     font-family: 'Noto Sans Regular';
 
-    width: 100%;
+    width: 90%;
     min-height: 100%;
 
-    margin: 0 5% 5% 0;
+    margin: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .basic-content-elements h1 {
@@ -106,7 +126,7 @@
 
     width: 100%;
 
-    margin: 5%;
+    padding: 5%;
 
     display: inline-block;
 }

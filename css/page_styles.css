@@ -14,28 +14,34 @@
     margin: 0;
 }
 
-body::-webkit-scrollbar-corner, p::-webkit-scrollbar-button:decrement, p::-webkit-scrollbar-button:increment {
+body::-webkit-scrollbar-corner, mjx-container::-webkit-scrollbar-corner, p::-webkit-scrollbar-button:decrement, p::-webkit-scrollbar-button:increment,
+mjx-container::-webkit-scrollbar-button:decrement, mjx-container::-webkit-scrollbar-button:increment {
   width: 0;
   height: 0;
 }
 
-body::-webkit-scrollbar-button {
+body::-webkit-scrollbar-button, mjx-container::-webkit-scrollbar-button {
     width: 0;
     height: 0;
 }
 
-body::-webkit-scrollbar{
-    width: 0.5em;
+body::-webkit-scrollbar, mjx-container::-webkit-scrollbar {
+    width: 1em;
 }
 
-body::-webkit-track {
+body::-webkit-track, mjx-container::-webkit-track {
     background: transparent;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, mjx-container::-webkit-scrollbar-thumb {
     background-color: var(--accent-secondary);
     border-radius: 10em;
     -webkit-border-radius: 10em;
+}
+
+mjx-container {
+    scrollbar-width: 1em;
+    scrollbar-color: var(--accent-secondary) transparent;
 }
 
 body {
